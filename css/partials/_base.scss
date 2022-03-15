@@ -18,6 +18,14 @@
 .grid {
   display: grid;
 }
+
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 /* /Custom Utility Classes */
 
 /* Mixins & Functions */

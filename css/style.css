@@ -18,6 +18,12 @@
   display: grid;
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* /Custom Utility Classes */
 /* Mixins & Functions */
 /* /Mixins & Functions */
@@ -77,12 +83,55 @@ label {
   height: 100vh;
   width: 15.56vw;
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
   /* foi necessária a adição dos paddings aos items individualmente e não
   à sidebar como um todo para que a classe active (que mostra qual item
   do menu está selecionado) ficasse de acordo com o design.
   a outra alternativa era manter o padding na sidebar, retirar a margem
   dos itens do menu e adicionar novamente o padding neles. achei muita
   gambiarra. */
+  /*&__profile {
+    padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
+      calculateRem(16px);
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+  }
+
+  .profile {
+    align-items: center;
+    margin-bottom: calculateRem(20px);
+    &__picture {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      padding-right: calculateRem(10px);
+    }
+
+    &__name {
+      grid-column: 2 / span end;
+      grid-row: 1;
+      font-size: calculateRem(16px);
+      line-height: calculateRem(19.5px);
+      color: $secondary-color;
+    }
+
+    &__options {
+      grid-row: 2;
+      grid-column: 2 / span end;
+      align-items: center;
+      gap: calculateRem(10px);
+
+      &-icon {
+        padding-right: calculateRem(4px);
+      }
+
+      &-label {
+        font-weight: 500;
+        font-size: calculateRem(10px);
+        line-height: calculateRem(12.19px);
+        color: $text-color;
+        padding-top: calculateRem(3px);
+      }
+    }
+  }*/
 }
 .sidebar__logo {
   padding: 1.3125rem 1.0625rem 1.3125rem 1rem;
@@ -95,42 +144,6 @@ label {
   margin-right: 1.0625rem;
   margin-left: 1rem;
   background-color: rgba(67, 67, 67, 0.2);
-}
-.sidebar__profile {
-  padding: 1.3125rem 1.0625rem 1.3125rem 1rem;
-  grid-template: 1fr 1fr/repeat(4, 1fr);
-}
-.sidebar .profile {
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-.sidebar .profile__picture {
-  grid-column: 1/span 2;
-  grid-row: 1/span 2;
-  padding-right: 0.625rem;
-}
-.sidebar .profile__name {
-  grid-column: 2/span end;
-  grid-row: 1;
-  font-size: 1rem;
-  line-height: 1.21875rem;
-  color: #5550b2;
-}
-.sidebar .profile__options {
-  grid-row: 2;
-  grid-column: 2/span end;
-  align-items: center;
-  gap: 0.625rem;
-}
-.sidebar .profile__options-icon {
-  padding-right: 0.25rem;
-}
-.sidebar .profile__options-label {
-  font-weight: 500;
-  font-size: 0.625rem;
-  line-height: 0.761875rem;
-  color: #434343;
-  padding-top: 0.1875rem;
 }
 
 .sidebar__list-items,

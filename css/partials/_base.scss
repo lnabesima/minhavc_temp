@@ -32,6 +32,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 /* /Reset */
 
@@ -81,6 +82,10 @@ p {
 
 label {
   font-size: calculateRem(12px);
+}
+
+.hidden-icon{
+  visibility: hidden;
 }
 
 /* /Custom Content */

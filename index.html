@@ -27,7 +27,9 @@
         <img src="/assets/left-arrow.svg" alt="Seta apontada para esquerda" />
       </div>
 
-      <div class="separator"></div>
+      <div class="separator">
+        <div class="separator__proper"></div>
+      </div>
 
       <div class="sidebar__profile profile grid">
         <img
@@ -54,7 +56,7 @@
       </div>
 
       <ul class="sidebar__list">
-        <li class="sidebar__list-items item flex">
+        <li class="sidebar__list-items item flex active">
           <img src="/assets/home.svg" alt="" />
           <p class="item__label">Home</p>
         </li>
@@ -67,6 +69,23 @@
             class="sidebar__list-more"
           />
         </li>
+
+        <ul class="sidebar__sublist">
+          <li class="sidebar__sublist-items subitem flex subactive">
+            <img src="/assets/phone.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Internet</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/phone.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Telefone</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/phone.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">TV</p>
+          </li>
+        </ul>
+
+
         <li class="sidebar__list-items item flex">
           <img src="/assets/barcode.svg" alt="" />
           <p class="item__label">Faturas</p>
@@ -76,6 +95,26 @@
             class="sidebar__list-more"
           />
         </li>
+
+        <ul class="sidebar__sublist">
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Fatura Atual</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Histórico de Pagamentos</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Notas Fiscais</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Declaração de Quitação de Débitos</p>
+          </li>
+        </ul>
+
         <li class="sidebar__list-items item flex">
           <img src="/assets/headset.svg" alt="" />
           <p class="item__label">Atendimentos</p>
@@ -85,6 +124,36 @@
             class="sidebar__list-more"
           />
         </li>
+
+        <ul class="sidebar__sublist">
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Suporte</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Mudança de Endereço</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Mudança de Ponto Interno</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Mudança de Titularidade</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Mudança de Vencimento</p>
+          </li>
+          <li class="sidebar__sublist-items subitem flex">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <p class="subitem__label">Meus atendimentos</p>
+          </li>
+
+
+        </ul>
+
         <li class="sidebar__list-items item flex">
           <img src="/assets/lightbulb.svg" alt="" />
           <p class="item__label">Sugestões</p>

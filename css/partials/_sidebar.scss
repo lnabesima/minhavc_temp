@@ -1,27 +1,42 @@
 .sidebar {
   font-family: 'Montserrat', sans-serif;
-
   height: 100vh;
   width: 15.56vw;
-  padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
-    calculateRem(16px);
-
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
 
-  &__profile {
-    grid-template: 1fr 1fr / repeat(4, 1fr);
+  
+
+/* foi necessária a adição dos paddings aos items individualmente e não
+à sidebar como um todo para que a classe active (que mostra qual item
+do menu está selecionado) ficasse de acordo com o design.
+a outra alternativa era manter o padding na sidebar, retirar a margem
+dos itens do menu e adicionar novamente o padding neles. achei muita
+gambiarra. */
+
+  &__logo {
+    padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
+      calculateRem(16px);
   }
 
   .separator {
-    height: 2px;
     width: 100%;
-    margin-top: calculateRem(20px);
-    margin-bottom: calculateRem(20px);
-    background-color: rgba(67, 67, 67, 0.2);
+    &__proper {
+      height: 2px;
+      margin-right: calculateRem(17px);
+      margin-left: calculateRem(16px);
+      background-color: rgba(67, 67, 67, 0.2);
+    }
+  }
+
+  &__profile {
+    padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
+      calculateRem(16px);
+    grid-template: 1fr 1fr / repeat(4, 1fr);
   }
 
   .profile {
     align-items: center;
+    margin-bottom: calculateRem(20px);
     &__picture {
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
@@ -57,14 +72,15 @@
   }
 }
 
-.sidebar__list {
-  margin-top: calculateRem(35px);
-  // align-items: center;
+.sidebar__list,
+.sidebar__sublist {
   &-items {
     align-items: center;
     list-style: none;
-    margin-bottom: calculateRem(30px);
+    padding: calculateRem(14px) calculateRem(17px) calculateRem(14px)
+      calculateRem(16px);
     gap: calculateRem(11px);
+    cursor: pointer;
   }
 
   &-more {
@@ -74,10 +90,28 @@
 
 .item {
   &__label {
-    margin-top: 3px;
+    margin-top: calculateRem(3px);
     color: $primary-color;
     font-weight: 600;
     font-size: calculateRem(14px);
     line-height: calculateRem(17.07px);
   }
+}
+
+.subitem {
+  &__label {
+    margin-top: calculateRem(-3px);
+    color: $text-color;
+    font-weight: 500;
+    font-size: calculateRem(12px);
+    line-height: calculateRem(14.63px);
+  }
+}
+
+.active {
+  background-color: rgba(253, 103, 0, 0.07);
+}
+
+.subactive {
+  background-color: rgba(85, 80, 178, 0.1);
 }

@@ -71,27 +71,6 @@ gambiarra. */
       }
     }
   }
-
-  /*
-    &__options {
-      grid-row: 2;
-      grid-column: 2 / span end;
-      align-items: center;
-      gap: calculateRem(10px);
-
-      &-icon {
-        padding-right: calculateRem(4px);
-      }
-
-      &-label {
-        font-weight: 500;
-        font-size: calculateRem(10px);
-        line-height: calculateRem(12.19px);
-        color: $text-color;
-        padding-top: calculateRem(3px);
-      }
-    }
-  }*/
 }
 
 .sidebar__list,

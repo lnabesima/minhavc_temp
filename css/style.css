@@ -77,6 +77,15 @@ label {
   visibility: hidden;
 }
 
+.background {
+  height: 100%;
+  align-items: flex-end;
+}
+.background__img {
+  width: 100%;
+  opacity: 0.25;
+}
+
 /* /Custom Content */
 .sidebar {
   font-family: "Montserrat", sans-serif;
@@ -84,6 +93,7 @@ label {
   width: 15.56vw;
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  flex-shrink: 0;
   /* foi necessária a adição dos paddings aos items individualmente e não
   à sidebar como um todo para que a classe active (que mostra qual item
   do menu está selecionado) ficasse de acordo com o design.

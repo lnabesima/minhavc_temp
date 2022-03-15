@@ -19,12 +19,11 @@
   display: grid;
 }
 
-.ellipsis{
+.ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 /* /Custom Utility Classes */
 
@@ -92,8 +91,17 @@ label {
   font-size: calculateRem(12px);
 }
 
-.hidden-icon{
+.hidden-icon {
   visibility: hidden;
 }
 
+.background {
+  height: 100%;
+  align-items: flex-end;
+
+  &__img {
+    width: 100%;
+    opacity: 0.25;
+  }
+}
 /* /Custom Content */

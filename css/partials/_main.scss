@@ -1,0 +1,19 @@
+main {
+  width: 100%;
+
+  border: 1px solid black;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(/assets/bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    opacity: 0.25;
+  }
+}

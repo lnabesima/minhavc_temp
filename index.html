@@ -24,7 +24,7 @@
     <nav class="sidebar">
       <div class="sidebar__logo flex flex-center-between">
         <img src="/assets/minhavoce.svg" alt="Logo da Minha Você" />
-        <img src="/assets/left-arrow.svg" alt="Seta apontada para esquerda" />
+        <img src="/assets/left-arrow.svg" alt="Seta apontada para esquerda" class="sidebar__logo-back"/>
       </div>
 
       <div class="separator">
@@ -56,17 +56,23 @@
       </div> -->
 
       <div class="sidebar__profile flex profile">
-        <img src="/assets/profile.png" alt="Imagem de Perfil" class="profile__photo">
+        <div class="profile__photo">
+          <img
+            src="/assets/profile.png"
+            alt="Imagem de Perfil"
+            class="profile__photo-proper"
+          />
+        </div>
         <div class="profile__info flex-column">
-          <h2>Rafael Conde</h2>
+          <h2 class="profile__name ellipsis">Rafael Conde</h2>
           <div class="profile__options flex">
             <div class="profile__options-settings flex">
-              <img src="/assets/cog.svg" alt="Engrenagem">
-              <p>Perfil</p>
+              <img src="/assets/cog.svg" alt="Engrenagem" />
+              <p class="profile__options-label">Perfil</p>
             </div>
             <div class="profile__options-logout flex">
-              <img src="/assets/logout.svg" alt="Logout">
-              <p>Logout</p>
+              <img src="/assets/logout.svg" alt="Logout" />
+              <p class="profile__options-label">Sair</p>
             </div>
           </div>
         </div>
@@ -89,19 +95,18 @@
 
         <ul class="sidebar__sublist">
           <li class="sidebar__sublist-items subitem flex subactive">
-            <img src="/assets/phone.svg" alt="" class="hidden-icon">
+            <img src="/assets/phone.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Internet</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/phone.svg" alt="" class="hidden-icon">
+            <img src="/assets/phone.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Telefone</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/phone.svg" alt="" class="hidden-icon">
+            <img src="/assets/phone.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">TV</p>
           </li>
         </ul>
-
 
         <li class="sidebar__list-items item flex">
           <img src="/assets/barcode.svg" alt="" />
@@ -115,19 +120,19 @@
 
         <ul class="sidebar__sublist">
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Fatura Atual</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Histórico de Pagamentos</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Notas Fiscais</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/barcode.svg" alt="" class="hidden-icon">
+            <img src="/assets/barcode.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Declaração de Quitação de Débitos</p>
           </li>
         </ul>
@@ -144,31 +149,29 @@
 
         <ul class="sidebar__sublist">
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Suporte</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Mudança de Endereço</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Mudança de Ponto Interno</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Mudança de Titularidade</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Mudança de Vencimento</p>
           </li>
           <li class="sidebar__sublist-items subitem flex">
-            <img src="/assets/headset.svg" alt="" class="hidden-icon">
+            <img src="/assets/headset.svg" alt="" class="hidden-icon" />
             <p class="subitem__label">Meus atendimentos</p>
           </li>
-
-
         </ul>
 
         <li class="sidebar__list-items item flex">

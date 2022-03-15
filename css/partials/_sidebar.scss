@@ -6,7 +6,7 @@
 
   overflow-y: auto;
 
-/* foi necessária a adição dos paddings aos items individualmente e não
+  /* foi necessária a adição dos paddings aos items individualmente e não
 à sidebar como um todo para que a classe active (que mostra qual item
 do menu está selecionado) ficasse de acordo com o design.
 a outra alternativa era manter o padding na sidebar, retirar a margem
@@ -16,6 +16,10 @@ gambiarra. */
   &__logo {
     padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
       calculateRem(16px);
+
+    &-back {
+      cursor: pointer;
+    }
   }
 
   .separator {
@@ -28,29 +32,46 @@ gambiarra. */
     }
   }
 
-  /*&__profile {
+  &__profile {
     padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
       calculateRem(16px);
-    grid-template: 1fr 1fr / repeat(4, 1fr);
   }
 
   .profile {
+    gap: calculateRem(8px);
     align-items: center;
-    margin-bottom: calculateRem(20px);
-    &__picture {
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 2;
-      padding-right: calculateRem(10px);
+    flex: 1;
+
+    &__photo {
+      flex-shrink: 0;
     }
 
     &__name {
-      grid-column: 2 / span end;
-      grid-row: 1;
+      min-width: 0;
       font-size: calculateRem(16px);
       line-height: calculateRem(19.5px);
       color: $secondary-color;
     }
 
+    &__options {
+      align-items: center;
+      gap: calculateRem(10px);
+      &-settings,
+      &-logout {
+        gap: calculateRem(4px);
+        cursor: pointer;
+      }
+      &-label {
+        font-weight: 500;
+        font-size: calculateRem(10px);
+        line-height: calculateRem(12.19px);
+        color: $text-color;
+        padding-top: calculateRem(3px);
+      }
+    }
+  }
+
+  /*
     &__options {
       grid-row: 2;
       grid-column: 2 / span end;

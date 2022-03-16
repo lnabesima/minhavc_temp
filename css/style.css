@@ -37,6 +37,10 @@
 
 /* /Reset */
 /* Custom Content */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -199,10 +203,12 @@ main::before {
 
 .footer {
   margin-top: auto;
+}
+.footer__container {
   padding: 1.625rem 4.375rem;
-  justify-content: space-between;
-  align-items: center;
   border-top: 1px solid rgba(69, 90, 100, 0.3);
+  align-items: center;
+  justify-content: space-between;
 }
 .footer__copyright-year, .footer__copyright-proper {
   font-family: "Roboto", sans-serif;
@@ -210,6 +216,34 @@ main::before {
   font-size: 0.8125rem;
   line-height: 0.951875rem;
   color: rgba(69, 90, 100, 0.8);
+}
+
+.whatsapp {
+  margin-left: auto;
+  margin-right: 4.375rem;
+  margin-bottom: 2.0625rem;
+}
+.whatsapp__button {
+  padding: 0.5rem 1rem;
+  width: 12.3125rem;
+  height: 2.625rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+  background-color: #d9fdd3;
+}
+.whatsapp__button-label {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.066875rem;
+  text-decoration: none;
+  color: #434343;
+  gap: 0.875rem;
+  align-items: center;
+}
+.whatsapp__button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #d9fdd3, #d9fdd3);
 }
 
 /*# sourceMappingURL=style.css.map */

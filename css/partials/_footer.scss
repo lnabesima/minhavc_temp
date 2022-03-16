@@ -1,0 +1,18 @@
+.footer {
+  margin-top: auto;
+  padding: calculateRem(26px) calculateRem(70px);
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(69, 90, 100, 0.3);
+
+  &__copyright {
+    &-year,
+    &-proper {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: calculateRem(13px);
+      line-height: calculateRem(15.23px);
+      color: rgba(69, 90, 100, 0.8);
+    }
+  }
+}

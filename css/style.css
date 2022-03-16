@@ -85,6 +85,7 @@ label {
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   flex-shrink: 0;
+  z-index: 1;
   /* foi necessária a adição dos paddings aos items individualmente e não
   à sidebar como um todo para que a classe active (que mostra qual item
   do menu está selecionado) ficasse de acordo com o design.
@@ -178,21 +179,37 @@ label {
 }
 
 main {
-  width: 100%;
-  border: 1px solid black;
+  height: 100vh;
+  max-width: 100%;
 }
 main::before {
   content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  position: fixed;
+  height: 100%;
+  right: 0;
+  left: 15.56vw;
+  z-index: -99;
+  opacity: 0.25;
+  background-color: #E5E5E5;
   background-image: url(/assets/bg.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  opacity: 0.25;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1.625rem 4.375rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(69, 90, 100, 0.3);
+}
+.footer__copyright-year, .footer__copyright-proper {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 0.951875rem;
+  color: rgba(69, 90, 100, 0.8);
 }
 
 /*# sourceMappingURL=style.css.map */

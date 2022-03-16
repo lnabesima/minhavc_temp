@@ -6,6 +6,7 @@
 
   overflow-y: auto;
   flex-shrink: 0;
+  z-index: 1;
 
   /* foi necessária a adição dos paddings aos items individualmente e não
 à sidebar como um todo para que a classe active (que mostra qual item

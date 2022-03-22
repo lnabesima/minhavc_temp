@@ -269,6 +269,13 @@ main::before {
 .footer__mobile-icon:not(.profile) {
   filter: invert(24%) sepia(0%) saturate(2%) hue-rotate(23deg) brightness(99%) contrast(91%);
 }
+.footer__mobile-icon.selected:not(.profile) {
+  filter: invert(37%) sepia(100%) saturate(1618%) hue-rotate(359deg) brightness(98%) contrast(110%);
+}
+.footer__mobile-icon.selected.profile {
+  border-radius: 50%;
+  border: 3px solid #ff5900;
+}
 
 .whatsapp {
   margin-left: auto;

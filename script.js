@@ -56,17 +56,17 @@ const footerOptions = document.querySelectorAll('.footer__mobile-options');
 const footerIcon = document.querySelectorAll('.footer__mobile-icon');
 const footerLabel = document.querySelectorAll('.footer__mobile-label');
 
-footerIcon.forEach(icon => {
-  //seleciona cada item do array footerIcon
-  icon.addEventListener('click', () => {
-    //adiciona listener de click a cada um deles
-    footerIcon.forEach(icon => {
-      //quando clicado, seleciona cada item do array novamente
-      icon.classList.remove('selected'); //itera por cada item e remove a classe 'selected'
-    });
-    icon.classList.add('selected'); //adiciona a classe 'selected' ao item clicado
-  });
-});
+// footerIcon.forEach(icon => {
+//   //seleciona cada item do array footerIcon
+//   icon.addEventListener('click', () => {
+//     //adiciona listener de click a cada um deles
+//     footerIcon.forEach(icon => {
+//       //quando clicado, seleciona cada item do array novamente
+//       icon.classList.remove('selected'); //itera por cada item e remove a classe 'selected'
+//     });
+//     icon.classList.add('selected'); //adiciona a classe 'selected' ao item clicado
+//   });
+// });
 
 footerLabel.forEach(label => {
   label.addEventListener('click', () => {
@@ -77,5 +77,19 @@ footerLabel.forEach(label => {
   });
 });
 
+footerOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    footerIcon.forEach(icon => {
+      icon.classList.remove('selected');
+    });
+
+    footerLabel.forEach(label => {
+      label.classList.remove('selected');
+    });
+
+    option.children[0].classList.add('selected');
+    option.children[1].classList.add('selected');
+  });
+});
 
 /*/Mobile footer*/

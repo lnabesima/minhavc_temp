@@ -56,6 +56,10 @@
     &-icon {
       width: calculateRem(25px);
       height: calculateRem(25px);
+      &:not(.profile) {
+        filter: invert(24%) sepia(0%) saturate(2%) hue-rotate(23deg)
+          brightness(99%) contrast(91%);
+      }
     }
   }
 }

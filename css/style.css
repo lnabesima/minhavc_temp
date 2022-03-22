@@ -276,6 +276,12 @@ main::before {
   border-radius: 50%;
   border: 2px solid #ff5900;
 }
+.footer__mobile-label {
+  color: #434343;
+}
+.footer__mobile-label.selected {
+  color: #ff5900;
+}
 
 .whatsapp {
   margin-left: auto;

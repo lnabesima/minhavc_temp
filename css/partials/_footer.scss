@@ -72,6 +72,14 @@
         }
       }
     }
+
+    &-label {
+      color: $text-color;
+
+      &.selected{
+        color: $primary-color;
+      }
+    }
   }
 }
 

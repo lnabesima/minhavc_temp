@@ -52,6 +52,7 @@ sublistItems.forEach(item => {
 });
 
 /*Mobile footer*/
+const footerOptions = document.querySelectorAll('.footer__mobile-options');
 const footerIcon = document.querySelectorAll('.footer__mobile-icon');
 const footerLabel = document.querySelectorAll('.footer__mobile-label');
 
@@ -66,5 +67,15 @@ footerIcon.forEach(icon => {
     icon.classList.add('selected'); //adiciona a classe 'selected' ao item clicado
   });
 });
+
+footerLabel.forEach(label => {
+  label.addEventListener('click', () => {
+    footerLabel.forEach(label => {
+      label.classList.remove('selected');
+    });
+    label.classList.add('selected');
+  });
+});
+
 
 /*/Mobile footer*/

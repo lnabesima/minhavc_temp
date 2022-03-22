@@ -50,3 +50,21 @@ sublistItems.forEach(item => {
     item.classList.add('subactive');
   });
 });
+
+/*Mobile footer*/
+const footerIcon = document.querySelectorAll('.footer__mobile-icon');
+const footerLabel = document.querySelectorAll('.footer__mobile-label');
+
+footerIcon.forEach(icon => {
+  //seleciona cada item do array footerIcon
+  icon.addEventListener('click', () => {
+    //adiciona listener de click a cada um deles
+    footerIcon.forEach(icon => {
+      //quando clicado, seleciona cada item do array novamente
+      icon.classList.remove('selected'); //itera por cada item e remove a classe 'selected'
+    });
+    icon.classList.add('selected'); //adiciona a classe 'selected' ao item clicado
+  });
+});
+
+/*/Mobile footer*/

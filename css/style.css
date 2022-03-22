@@ -274,7 +274,7 @@ main::before {
 }
 .footer__mobile-icon.selected.profile {
   border-radius: 50%;
-  border: 3px solid #ff5900;
+  border: 2px solid #ff5900;
 }
 
 .whatsapp {

@@ -1,7 +1,7 @@
 main {
   height: 100vh;
   max-width: 100%;
-  
+
   &::before {
     content: '';
     position: fixed;
@@ -10,11 +10,12 @@ main {
     left: 15.56vw;
     z-index: -99;
     opacity: 0.25;
-    
-    background-color: #E5E5E5;
+
+    background-color: #e5e5e5;
     background-image: url(/assets/bg.svg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
+    border: 1px solid red;
   }
 }

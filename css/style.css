@@ -24,6 +24,8 @@
   text-overflow: ellipsis;
 }
 
+/* Media Queries */
+/* /Media Queries */
 /* /Custom Utility Classes */
 /* Mixins & Functions */
 /* /Mixins & Functions */
@@ -144,6 +146,11 @@ label {
   color: #434343;
   padding-top: 0.1875rem;
 }
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
 
 .sidebar__list-items,
 .sidebar__sublist-items {
@@ -198,11 +205,12 @@ main::before {
   left: 15.56vw;
   z-index: -99;
   opacity: 0.25;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   background-image: url(/assets/bg.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
+  border: 1px solid red;
 }
 
 .footer {
@@ -214,6 +222,11 @@ main::before {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1024px) {
+  .footer__container {
+    display: none;
+  }
+}
 .footer__copyright-year, .footer__copyright-proper {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -221,11 +234,44 @@ main::before {
   line-height: 0.951875rem;
   color: rgba(69, 90, 100, 0.8);
 }
+.footer__mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .footer__mobile {
+    display: block;
+  }
+}
+.footer__mobile-wrapper {
+  height: 5rem;
+  width: 100vw;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.footer__mobile-options {
+  margin-top: 1.0625rem;
+  margin-bottom: 1.125rem;
+  align-items: center;
+  gap: 0.4375rem;
+}
+.footer__mobile-icon {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
 
 .whatsapp {
   margin-left: auto;
   margin-right: 4.375rem;
   margin-bottom: 2.0625rem;
+}
+@media (max-width: 1024px) {
+  .whatsapp {
+    margin-left: 1.5625rem;
+    margin-right: 1.5625rem;
+    margin-bottom: 2.375rem;
+  }
 }
 .whatsapp__button {
   padding: 0.5rem 1rem;
@@ -235,6 +281,12 @@ main::before {
   border: none;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   background-color: #d9fdd3;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .whatsapp__button {
+    width: 100%;
+  }
 }
 .whatsapp__button-label {
   text-align: center;

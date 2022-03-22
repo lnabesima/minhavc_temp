@@ -72,6 +72,10 @@ gambiarra. */
       }
     }
   }
+
+  @include device('mobile'){
+    display: none;
+  }
 }
 
 .sidebar__list,

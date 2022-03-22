@@ -25,11 +25,26 @@
   text-overflow: ellipsis;
 }
 
+/* Media Queries */
+
+$breakpoints: (
+  'mobile': 1024px,
+  'laptop': 1440px,
+);
+
+/* /Media Queries */
+
 /* /Custom Utility Classes */
 
 /* Mixins & Functions */
 @function calculateRem($size) {
   @return math.div($size, 16px) * 1rem;
+}
+
+@mixin device($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }
 
 /* /Mixins & Functions */
@@ -44,7 +59,7 @@
 /* /Reset */
 
 /* Custom Content */
-*{
+* {
   font-family: 'Montserrat', sans-serif;
 }
 $primary-color: #ff5900;

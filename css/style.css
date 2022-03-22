@@ -210,7 +210,13 @@ main::before {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  border: 1px solid red;
+}
+@media (max-width: 1024px) {
+  main::before {
+    position: absolute;
+    left: 0;
+    background-size: auto;
+  }
 }
 
 .footer {

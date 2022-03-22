@@ -16,6 +16,11 @@ main {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
-    border: 1px solid red;
+
+    @include device('mobile') {
+      position: absolute;
+      left: 0;
+      background-size: auto;
+    }
   }
 }

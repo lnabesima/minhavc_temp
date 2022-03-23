@@ -74,7 +74,17 @@ gambiarra. */
   }
 
   @include device('mobile'){
-    display: none;
+    &.closed{
+      display: none;
+    }
+
+    &.open{
+      display: absolute;
+      width: 100%;
+      
+    }
+
+    
   }
 }
 

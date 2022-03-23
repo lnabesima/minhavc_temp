@@ -73,18 +73,18 @@ gambiarra. */
     }
   }
 
-  @include device('mobile'){
-    &.closed{
-      display: none;
-    }
+  @include device('mobile') {
+    display: none;
+  }
 
-    &.open{
-      display: absolute;
-      width: 100%;
-      
+  &.open {
+    display: block;
+    width: 90%;
+    &__container{
+      display: fixed;
+      inset: 0 90% 0 0;
+      background-color: white;
     }
-
-    
   }
 }
 

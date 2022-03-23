@@ -1,6 +1,8 @@
+const sidebar = document.querySelector('.sidebar');
 const listItems = document.querySelectorAll('.sidebar__list-items');
 const sublist = document.querySelectorAll('.sidebar__sublist');
 const sublistItems = document.querySelectorAll('.sidebar__sublist-items');
+const goBackArrow = document.querySelector('.sidebar__logo-back');
 
 $('.sidebar__list').on('click', 'li', function () {
   // seleciona todos os items que tem a classe 'open'
@@ -55,27 +57,7 @@ sublistItems.forEach(item => {
 const footerOptions = document.querySelectorAll('.footer__mobile-options');
 const footerIcon = document.querySelectorAll('.footer__mobile-icon');
 const footerLabel = document.querySelectorAll('.footer__mobile-label');
-
-// footerIcon.forEach(icon => {
-//   //seleciona cada item do array footerIcon
-//   icon.addEventListener('click', () => {
-//     //adiciona listener de click a cada um deles
-//     footerIcon.forEach(icon => {
-//       //quando clicado, seleciona cada item do array novamente
-//       icon.classList.remove('selected'); //itera por cada item e remove a classe 'selected'
-//     });
-//     icon.classList.add('selected'); //adiciona a classe 'selected' ao item clicado
-//   });
-// });
-
-footerLabel.forEach(label => {
-  label.addEventListener('click', () => {
-    footerLabel.forEach(label => {
-      label.classList.remove('selected');
-    });
-    label.classList.add('selected');
-  });
-});
+const mobileMenu = document.querySelector('#mobile-menu');
 
 footerOptions.forEach(option => {
   option.addEventListener('click', () => {
@@ -92,4 +74,12 @@ footerOptions.forEach(option => {
   });
 });
 
+mobileMenu.addEventListener('click', () => {
+  sidebar.classList.add('open');
+});
+
 /*/Mobile footer*/
+
+goBackArrow.addEventListener('click', () => {
+  sidebar.classList.remove('open');
+});

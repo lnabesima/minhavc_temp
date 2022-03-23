@@ -27,147 +27,150 @@
   </head>
   <body class="flex">
     <nav class="sidebar">
-      <div class="sidebar__logo flex flex-center-between">
-        <img src="./assets/minhavoce.svg" alt="Logo da Minha Você" />
-        <img
-          src="./assets/left-arrow.svg"
-          alt="Seta apontada para esquerda"
-          class="sidebar__logo-back"
-        />
-      </div>
+      <div class="sidebar__container">
 
-      <div class="separator">
-        <div class="separator__proper"></div>
-      </div>
-
-      <div class="sidebar__profile flex profile">
-        <div class="profile__photo">
+        <div class="sidebar__logo flex flex-center-between">
+          <img src="./assets/minhavoce.svg" alt="Logo da Minha Você" />
           <img
-            src="./assets/profile.png"
-            alt="Imagem de Perfil"
-            class="profile__photo-proper"
+            src="./assets/left-arrow.svg"
+            alt="Seta apontada para esquerda"
+            class="sidebar__logo-back"
           />
         </div>
-        <div class="profile__info flex-column">
-          <h2 class="profile__name ellipsis">Rafael Conde</h2>
-          <div class="profile__options flex">
-            <div class="profile__options-settings flex">
-              <img src="./assets/cog.svg" alt="Engrenagem" />
-              <p class="profile__options-label">Perfil</p>
-            </div>
-            <div class="profile__options-logout flex">
-              <img src="./assets/logout.svg" alt="Logout" />
-              <p class="profile__options-label">Sair</p>
+  
+        <div class="separator">
+          <div class="separator__proper"></div>
+        </div>
+  
+        <div class="sidebar__profile flex profile">
+          <div class="profile__photo">
+            <img
+              src="./assets/profile.png"
+              alt="Imagem de Perfil"
+              class="profile__photo-proper"
+            />
+          </div>
+          <div class="profile__info flex-column">
+            <h2 class="profile__name ellipsis">Rafael Conde</h2>
+            <div class="profile__options flex">
+              <div class="profile__options-settings flex">
+                <img src="./assets/cog.svg" alt="Engrenagem" />
+                <p class="profile__options-label">Perfil</p>
+              </div>
+              <div class="profile__options-logout flex">
+                <img src="./assets/logout.svg" alt="Logout" />
+                <p class="profile__options-label">Sair</p>
+              </div>
             </div>
           </div>
         </div>
+  
+        <ul class="sidebar__list">
+          <li class="sidebar__list-items item flex active">
+            <img src="./assets/home.svg" alt="" />
+            <p class="item__label">Home</p>
+          </li>
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/phone.svg" alt="" />
+            <p class="item__label">Meus Planos</p>
+            <img
+              src="./assets/down-triangle.svg"
+              alt=""
+              class="sidebar__list-more"
+            />
+          </li>
+  
+          <ul class="sidebar__sublist list-hidden">
+            <li class="sidebar__sublist-items subitem flex subactive">
+              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Internet</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Telefone</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">TV</p>
+            </li>
+          </ul>
+  
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/barcode.svg" alt="" />
+            <p class="item__label">Faturas</p>
+            <img
+              src="./assets/down-triangle.svg"
+              alt=""
+              class="sidebar__list-more"
+            />
+          </li>
+  
+          <ul class="sidebar__sublist list-hidden">
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Fatura Atual</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Histórico de Pagamentos</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Notas Fiscais</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Declaração de Quitação de Débitos</p>
+            </li>
+          </ul>
+  
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/headset.svg" alt="" />
+            <p class="item__label">Atendimentos</p>
+            <img
+              src="./assets/down-triangle.svg"
+              alt=""
+              class="sidebar__list-more"
+            />
+          </li>
+  
+          <ul class="sidebar__sublist list-hidden">
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Suporte</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Endereço</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Ponto Interno</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Titularidade</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Vencimento</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Meus atendimentos</p>
+            </li>
+          </ul>
+  
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/lightbulb.svg" alt="" />
+            <p class="item__label">Sugestões</p>
+          </li>
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/text-ballon.svg" alt="" />
+            <p class="item__label">Ajuda</p>
+          </li>
+        </ul>
       </div>
-
-      <ul class="sidebar__list">
-        <li class="sidebar__list-items item flex active">
-          <img src="./assets/home.svg" alt="" />
-          <p class="item__label">Home</p>
-        </li>
-        <li class="sidebar__list-items item flex">
-          <img src="./assets/phone.svg" alt="" />
-          <p class="item__label">Meus Planos</p>
-          <img
-            src="./assets/down-triangle.svg"
-            alt=""
-            class="sidebar__list-more"
-          />
-        </li>
-
-        <ul class="sidebar__sublist list-hidden">
-          <li class="sidebar__sublist-items subitem flex subactive">
-            <img src="./assets/phone.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Internet</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/phone.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Telefone</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/phone.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">TV</p>
-          </li>
-        </ul>
-
-        <li class="sidebar__list-items item flex">
-          <img src="./assets/barcode.svg" alt="" />
-          <p class="item__label">Faturas</p>
-          <img
-            src="./assets/down-triangle.svg"
-            alt=""
-            class="sidebar__list-more"
-          />
-        </li>
-
-        <ul class="sidebar__sublist list-hidden">
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Fatura Atual</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Histórico de Pagamentos</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Notas Fiscais</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Declaração de Quitação de Débitos</p>
-          </li>
-        </ul>
-
-        <li class="sidebar__list-items item flex">
-          <img src="./assets/headset.svg" alt="" />
-          <p class="item__label">Atendimentos</p>
-          <img
-            src="./assets/down-triangle.svg"
-            alt=""
-            class="sidebar__list-more"
-          />
-        </li>
-
-        <ul class="sidebar__sublist list-hidden">
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Suporte</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Mudança de Endereço</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Mudança de Ponto Interno</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Mudança de Titularidade</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Mudança de Vencimento</p>
-          </li>
-          <li class="sidebar__sublist-items subitem flex">
-            <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-            <p class="subitem__label">Meus atendimentos</p>
-          </li>
-        </ul>
-
-        <li class="sidebar__list-items item flex">
-          <img src="./assets/lightbulb.svg" alt="" />
-          <p class="item__label">Sugestões</p>
-        </li>
-        <li class="sidebar__list-items item flex">
-          <img src="./assets/text-ballon.svg" alt="" />
-          <p class="item__label">Ajuda</p>
-        </li>
-      </ul>
     </nav>
     <main class="flex-column">
       <div class="content"></div>
@@ -209,7 +212,7 @@
         </div>
 
         <div class="footer__mobile">
-          <div class="footer__mobile-wrapper flex">
+          <div class="footer__mobile-wrapper flex" id="mobile-menu">
             <div class="footer__mobile-options flex-column">
               <img
                 src="./assets/plus-icon.svg"
@@ -218,7 +221,7 @@
               />
               <p class="footer__mobile-label">Opções</p>
             </div>
-            <div class="footer__mobile-options flex-column">
+            <div class="footer__mobile-options flex-column" id="mobile-plans">
               <img
                 src="./assets/plans-icon.svg"
                 alt=""
@@ -234,7 +237,7 @@
               />
               <p class="footer__mobile-label">Home</p>
             </div>
-            <div class="footer__mobile-options flex-column">
+            <div class="footer__mobile-options flex-column" id="mobile-invoice">
               <img
                 src="./assets/invoice-icon.svg"
                 alt=""
@@ -242,7 +245,7 @@
               />
               <p class="footer__mobile-label">Faturas</p>
             </div>
-            <div class="footer__mobile-options flex-column">
+            <div class="footer__mobile-options flex-column" id="mobile-profile">
               <img
                 src="./assets/profile.png"
                 alt=""

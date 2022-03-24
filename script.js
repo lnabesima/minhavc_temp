@@ -75,11 +75,11 @@ footerOptions.forEach(option => {
 });
 
 mobileMenu.addEventListener('click', () => {
-  sidebar.classList.add('open');
+  sidebar.classList.add('opened');
 });
 
 /*/Mobile footer*/
 
 goBackArrow.addEventListener('click', () => {
-  sidebar.classList.remove('open');
+  sidebar.classList.remove('opened');
 });

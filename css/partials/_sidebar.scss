@@ -3,10 +3,10 @@
   height: 100vh;
   width: 15.56vw;
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
-
+  background-color: white;
   overflow-y: auto;
   flex-shrink: 0;
-  z-index: 1;
+  z-index: 999999;
 
   /* foi necessária a adição dos paddings aos items individualmente e não
 à sidebar como um todo para que a classe active (que mostra qual item
@@ -42,7 +42,6 @@ gambiarra. */
   .profile {
     gap: calculateRem(8px);
     align-items: center;
-    flex: 1;
 
     &__photo {
       flex-shrink: 0;
@@ -77,14 +76,11 @@ gambiarra. */
     display: none;
   }
 
-  &.open {
+  &.opened {
     display: block;
+    position: fixed;
     width: 90%;
-    &__container{
-      display: fixed;
-      inset: 0 90% 0 0;
-      background-color: white;
-    }
+
   }
 }
 

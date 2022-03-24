@@ -82,6 +82,55 @@ gambiarra. */
       width: 100%;
     }
   }
+
+  &__container {
+    align-items: stretch;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+  }
+
+  &__footer {
+    display: none;
+
+    @include device('mobile') {
+      display: block;
+      // margin-top: calculateRem(340px);
+      margin-bottom: calculateRem(103px);
+
+      &-container {
+        justify-content: center;
+        align-items: center;
+        gap: calculateRem(8px);
+      }
+
+      &-logo {
+        width: calculateRem(77.26px);
+        height: calculateRem(30px);
+      }
+
+      &-separator {
+        width: calculateRem(130px);
+
+        .separator__proper {
+          height: 2px;
+          color: black;
+        }
+      }
+
+      &-copyright{
+        align-items: center;
+      }
+
+      &-copyright1,
+      &-copyright2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: calculateRem(11px);
+        line-height: calculateRem(12.89px);
+        color: $text-color;
+      }
+    }
+  }
 }
 
 .sidebar__list,

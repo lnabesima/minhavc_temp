@@ -27,43 +27,44 @@
   </head>
   <body class="flex">
     <nav class="sidebar">
+      <!-- <div class="sidebar__container flex-column"> -->
+      <div class="sidebar__logo flex flex-center-between">
+        <img src="./assets/minhavoce.svg" alt="Logo da Minha Você" />
+        <img
+          src="./assets/left-arrow.svg"
+          alt="Seta apontada para esquerda"
+          class="sidebar__logo-back"
+        />
+      </div>
 
-        <div class="sidebar__logo flex flex-center-between">
-          <img src="./assets/minhavoce.svg" alt="Logo da Minha Você" />
+      <div class="separator">
+        <div class="separator__proper"></div>
+      </div>
+
+      <div class="sidebar__profile flex profile">
+        <div class="profile__photo">
           <img
-            src="./assets/left-arrow.svg"
-            alt="Seta apontada para esquerda"
-            class="sidebar__logo-back"
+            src="./assets/profile.png"
+            alt="Imagem de Perfil"
+            class="profile__photo-proper"
           />
         </div>
-  
-        <div class="separator">
-          <div class="separator__proper"></div>
-        </div>
-  
-        <div class="sidebar__profile flex profile">
-          <div class="profile__photo">
-            <img
-              src="./assets/profile.png"
-              alt="Imagem de Perfil"
-              class="profile__photo-proper"
-            />
-          </div>
-          <div class="profile__info flex-column">
-            <h2 class="profile__name ellipsis">Rafael Conde</h2>
-            <div class="profile__options flex">
-              <div class="profile__options-settings flex">
-                <img src="./assets/cog.svg" alt="Engrenagem" />
-                <p class="profile__options-label">Perfil</p>
-              </div>
-              <div class="profile__options-logout flex">
-                <img src="./assets/logout.svg" alt="Logout" />
-                <p class="profile__options-label">Sair</p>
-              </div>
+        <div class="profile__info flex-column">
+          <h2 class="profile__name ellipsis">Rafael Conde</h2>
+          <div class="profile__options flex">
+            <div class="profile__options-settings flex">
+              <img src="./assets/cog.svg" alt="Engrenagem" />
+              <p class="profile__options-label">Perfil</p>
+            </div>
+            <div class="profile__options-logout flex">
+              <img src="./assets/logout.svg" alt="Logout" />
+              <p class="profile__options-label">Sair</p>
             </div>
           </div>
         </div>
-  
+      </div>
+
+      <div class="sidebar__container flex-column">
         <ul class="sidebar__list">
           <li class="sidebar__list-items item flex active">
             <img src="./assets/home.svg" alt="" />
@@ -78,7 +79,7 @@
               class="sidebar__list-more"
             />
           </li>
-  
+
           <ul class="sidebar__sublist list-hidden">
             <li class="sidebar__sublist-items subitem flex subactive">
               <img src="./assets/phone.svg" alt="" class="hidden-icon" />
@@ -93,7 +94,7 @@
               <p class="subitem__label">TV</p>
             </li>
           </ul>
-  
+
           <li class="sidebar__list-items item flex">
             <img src="./assets/barcode.svg" alt="" />
             <p class="item__label">Faturas</p>
@@ -103,7 +104,7 @@
               class="sidebar__list-more"
             />
           </li>
-  
+
           <ul class="sidebar__sublist list-hidden">
             <li class="sidebar__sublist-items subitem flex">
               <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
@@ -122,7 +123,7 @@
               <p class="subitem__label">Declaração de Quitação de Débitos</p>
             </li>
           </ul>
-  
+
           <li class="sidebar__list-items item flex">
             <img src="./assets/headset.svg" alt="" />
             <p class="item__label">Atendimentos</p>
@@ -132,7 +133,7 @@
               class="sidebar__list-more"
             />
           </li>
-  
+
           <ul class="sidebar__sublist list-hidden">
             <li class="sidebar__sublist-items subitem flex">
               <img src="./assets/headset.svg" alt="" class="hidden-icon" />
@@ -159,7 +160,7 @@
               <p class="subitem__label">Meus atendimentos</p>
             </li>
           </ul>
-  
+
           <li class="sidebar__list-items item flex">
             <img src="./assets/lightbulb.svg" alt="" />
             <p class="item__label">Sugestões</p>
@@ -171,11 +172,24 @@
         </ul>
 
         <div class="sidebar__footer">
-          <img src="./assets/logo.svg" alt="Logo da Você Telecom" class="sidebar__footer-logo">
-          <div class="sidebar__footer-separator"></div>
-          <p class="sidebar__footer-copyright1">Copyright ® 2022. v2.23.4</p>
-          <p class="sidebar__footer-copyright2">Todos os direitos reservados.</p>
+          <div class="sidebar__footer-container flex-column">
+            <img
+              src="./assets/logo.svg"
+              alt="Logo da Você Telecom"
+              class="sidebar__footer-logo"
+            />
+            <div class="sidebar__footer-separator">
+              <div class="separator__proper"></div>
+            </div>
+            <div class="sidebar__footer-copyright flex-column">
+              <p class="sidebar__footer-copyright1">Copyright ® 2022. v2.23.4</p>
+              <p class="sidebar__footer-copyright2">
+                Todos os direitos reservados.
+            </div>
+            </p>
+          </div>
         </div>
+      </div>
     </nav>
     <main class="flex-column">
       <div class="content"></div>
@@ -217,7 +231,7 @@
         </div>
 
         <div class="footer__mobile">
-          <div class="footer__mobile-wrapper flex" >
+          <div class="footer__mobile-wrapper flex">
             <div class="footer__mobile-options flex-column" id="mobile-menu">
               <img
                 src="./assets/plus-icon.svg"

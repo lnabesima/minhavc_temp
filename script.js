@@ -33,6 +33,10 @@ $('.sidebar__list').on('click', 'li', function () {
     this.classList.add('open');
     // seleciona o próximo item que tem a classe 'sidebar__sublist' e faz um slideDown
     $(this).next('.sidebar__sublist').slideDown();
+  } else {
+    // retira a classe 'opened' da sidebar
+    // isso é uma 'gambiarra' 🤷‍♂️️
+    sidebar.classList.remove('opened');
   }
 });
 
@@ -45,6 +49,9 @@ listItems.forEach(item => {
       subitem.classList.remove('subactive');
     });
     item.classList.add('active');
+    if (item.id == "help") {
+      sidebar.classList.remove('opened');
+    }
   });
 });
 

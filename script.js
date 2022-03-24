@@ -1,6 +1,12 @@
+const sidebar = document.querySelector('.sidebar');
 const listItems = document.querySelectorAll('.sidebar__list-items');
 const sublist = document.querySelectorAll('.sidebar__sublist');
 const sublistItems = document.querySelectorAll('.sidebar__sublist-items');
+const goBackArrow = document.querySelector('.sidebar__logo-back');
+const footerOptions = document.querySelectorAll('.footer__mobile-options');
+const footerIcon = document.querySelectorAll('.footer__mobile-icon');
+const footerLabel = document.querySelectorAll('.footer__mobile-label');
+const mobileMenu = document.querySelector('#mobile-menu');
 
 $('.sidebar__list').on('click', 'li', function () {
   // seleciona todos os items que tem a classe 'open'
@@ -27,6 +33,10 @@ $('.sidebar__list').on('click', 'li', function () {
     this.classList.add('open');
     // seleciona o próximo item que tem a classe 'sidebar__sublist' e faz um slideDown
     $(this).next('.sidebar__sublist').slideDown();
+  } else {
+    // retira a classe 'opened' da sidebar
+    // isso é uma 'gambiarra' 🤷‍♂️️
+    sidebar.classList.remove('opened');
   }
 });
 
@@ -39,6 +49,9 @@ listItems.forEach(item => {
       subitem.classList.remove('subactive');
     });
     item.classList.add('active');
+    if (item.id == "help") {
+      sidebar.classList.remove('opened');
+    }
   });
 });
 
@@ -48,35 +61,11 @@ sublistItems.forEach(item => {
       subitem.classList.remove('subactive');
     });
     item.classList.add('subactive');
+    sidebar.classList.remove('opened');
   });
 });
 
 /*Mobile footer*/
-const footerOptions = document.querySelectorAll('.footer__mobile-options');
-const footerIcon = document.querySelectorAll('.footer__mobile-icon');
-const footerLabel = document.querySelectorAll('.footer__mobile-label');
-
-// footerIcon.forEach(icon => {
-//   //seleciona cada item do array footerIcon
-//   icon.addEventListener('click', () => {
-//     //adiciona listener de click a cada um deles
-//     footerIcon.forEach(icon => {
-//       //quando clicado, seleciona cada item do array novamente
-//       icon.classList.remove('selected'); //itera por cada item e remove a classe 'selected'
-//     });
-//     icon.classList.add('selected'); //adiciona a classe 'selected' ao item clicado
-//   });
-// });
-
-footerLabel.forEach(label => {
-  label.addEventListener('click', () => {
-    footerLabel.forEach(label => {
-      label.classList.remove('selected');
-    });
-    label.classList.add('selected');
-  });
-});
-
 footerOptions.forEach(option => {
   option.addEventListener('click', () => {
     footerIcon.forEach(icon => {
@@ -92,4 +81,12 @@ footerOptions.forEach(option => {
   });
 });
 
+mobileMenu.addEventListener('click', () => {
+  sidebar.classList.add('opened');
+
+});
+
 /*/Mobile footer*/
+goBackArrow.addEventListener('click', () => {
+  sidebar.classList.remove('opened');
+});

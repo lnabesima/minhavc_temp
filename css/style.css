@@ -89,9 +89,10 @@ label {
   height: 100vh;
   width: 15.56vw;
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
   overflow-y: auto;
   flex-shrink: 0;
-  z-index: 1;
+  z-index: 999999;
   /* foi necessária a adição dos paddings aos items individualmente e não
   à sidebar como um todo para que a classe active (que mostra qual item
   do menu está selecionado) ficasse de acordo com o design.
@@ -117,10 +118,14 @@ label {
 .sidebar__profile {
   padding: 1.3125rem 1.0625rem 1.3125rem 1rem;
 }
+@media (max-width: 1024px) {
+  .sidebar__profile {
+    justify-content: center;
+  }
+}
 .sidebar .profile {
   gap: 0.5rem;
   align-items: center;
-  flex: 1;
 }
 .sidebar .profile__photo {
   flex-shrink: 0;
@@ -148,7 +153,48 @@ label {
 }
 @media (max-width: 1024px) {
   .sidebar {
-    display: none;
+    position: fixed;
+    left: -1000px;
+    transition: 0.5s ease-in-out;
+  }
+  .sidebar.opened {
+    left: 0;
+    width: 100%;
+  }
+}
+.sidebar__footer {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .sidebar__footer {
+    display: block;
+    margin-top: 21.25rem;
+    flex-grow: 1;
+  }
+  .sidebar__footer-container {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .sidebar__footer-logo {
+    width: 4.82875rem;
+    height: 1.875rem;
+  }
+  .sidebar__footer-separator {
+    width: 8.125rem;
+  }
+  .sidebar__footer-separator .separator__proper {
+    height: 2px;
+    color: black;
+  }
+  .sidebar__footer-copyright {
+    align-items: center;
+  }
+  .sidebar__footer-copyright1, .sidebar__footer-copyright2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.6875rem;
+    line-height: 0.805625rem;
+    color: #434343;
   }
 }
 
@@ -322,6 +368,47 @@ main::before {
 }
 .whatsapp__button:active {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #d9fdd3, #d9fdd3);
+}
+
+@-webkit-keyframes slide-in-left {
+  from {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-left {
+  from {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

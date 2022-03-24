@@ -38,7 +38,7 @@ gambiarra. */
     padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
       calculateRem(16px);
 
-    @include device('mobile'){
+    @include device('mobile') {
       justify-content: center;
     }
   }
@@ -87,20 +87,17 @@ gambiarra. */
     }
   }
 
-  &__container {
-    align-items: stretch;
-    height: 100%;
-    max-height: 100%;
-    overflow-y: hidden;
-  }
+  // &__container {
+  // }
 
   &__footer {
     display: none;
 
     @include device('mobile') {
       display: block;
-      // margin-top: calculateRem(340px);
-      margin-bottom: calculateRem(103px);
+      margin-top: calculateRem(340px);
+      // margin-bottom: calculateRem(103px);
+      flex-grow: 1;
 
       &-container {
         justify-content: center;
@@ -122,7 +119,7 @@ gambiarra. */
         }
       }
 
-      &-copyright{
+      &-copyright {
         align-items: center;
       }
 

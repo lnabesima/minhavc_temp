@@ -76,6 +76,7 @@ footerOptions.forEach(option => {
 
 mobileMenu.addEventListener('click', () => {
   sidebar.classList.add('opened');
+
 });
 
 /*/Mobile footer*/

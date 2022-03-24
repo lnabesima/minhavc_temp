@@ -73,14 +73,14 @@ gambiarra. */
   }
 
   @include device('mobile') {
-    display: none;
-  }
-
-  &.opened {
-    display: block;
     position: fixed;
-    width: 90%;
+    left: -1000px;
+    transition: 0.5s ease-in-out;
 
+    &.opened {
+      left: 0;
+      width: 100%;
+    }
   }
 }
 

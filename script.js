@@ -3,6 +3,10 @@ const listItems = document.querySelectorAll('.sidebar__list-items');
 const sublist = document.querySelectorAll('.sidebar__sublist');
 const sublistItems = document.querySelectorAll('.sidebar__sublist-items');
 const goBackArrow = document.querySelector('.sidebar__logo-back');
+const footerOptions = document.querySelectorAll('.footer__mobile-options');
+const footerIcon = document.querySelectorAll('.footer__mobile-icon');
+const footerLabel = document.querySelectorAll('.footer__mobile-label');
+const mobileMenu = document.querySelector('#mobile-menu');
 
 $('.sidebar__list').on('click', 'li', function () {
   // seleciona todos os items que tem a classe 'open'
@@ -50,15 +54,11 @@ sublistItems.forEach(item => {
       subitem.classList.remove('subactive');
     });
     item.classList.add('subactive');
+    sidebar.classList.remove('opened');
   });
 });
 
 /*Mobile footer*/
-const footerOptions = document.querySelectorAll('.footer__mobile-options');
-const footerIcon = document.querySelectorAll('.footer__mobile-icon');
-const footerLabel = document.querySelectorAll('.footer__mobile-label');
-const mobileMenu = document.querySelector('#mobile-menu');
-
 footerOptions.forEach(option => {
   option.addEventListener('click', () => {
     footerIcon.forEach(icon => {
@@ -80,7 +80,6 @@ mobileMenu.addEventListener('click', () => {
 });
 
 /*/Mobile footer*/
-
 goBackArrow.addEventListener('click', () => {
   sidebar.classList.remove('opened');
 });

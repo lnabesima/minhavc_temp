@@ -118,6 +118,11 @@ label {
 .sidebar__profile {
   padding: 1.3125rem 1.0625rem 1.3125rem 1rem;
 }
+@media (max-width: 1024px) {
+  .sidebar__profile {
+    justify-content: center;
+  }
+}
 .sidebar .profile {
   gap: 0.5rem;
   align-items: center;

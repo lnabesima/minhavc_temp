@@ -37,6 +37,10 @@ gambiarra. */
   &__profile {
     padding: calculateRem(21px) calculateRem(17px) calculateRem(21px)
       calculateRem(16px);
+
+    @include device('mobile'){
+      justify-content: center;
+    }
   }
 
   .profile {

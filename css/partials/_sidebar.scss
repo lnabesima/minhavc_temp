@@ -87,16 +87,12 @@ gambiarra. */
     }
   }
 
-  // &__container {
-  // }
-
   &__footer {
     display: none;
 
     @include device('mobile') {
       display: block;
       margin-top: calculateRem(340px);
-      // margin-bottom: calculateRem(103px);
       flex-grow: 1;
 
       &-container {

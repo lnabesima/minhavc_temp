@@ -28,12 +28,9 @@
 
     @include device('mobile') {
       display: block;
-      // background-color: yellow;
-      // border: 1px solid yellow;
     }
 
     &-wrapper {
-      // height: 8.5vh;
       height: calculateRem(80px);
       width: 100vw;
       background-color: white;
@@ -41,7 +38,6 @@
       justify-content: space-around;
       align-items: center;
       box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.15);
-      // border: 1px solid black;
     }
 
     &-options {

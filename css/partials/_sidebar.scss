@@ -20,6 +20,7 @@ gambiarra. */
       calculateRem(16px);
 
     &-back {
+      filter: invert(27%) sepia(66%) saturate(1583%) hue-rotate(224deg) brightness(91%) contrast(80%);
       cursor: pointer;
     }
   }

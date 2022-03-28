@@ -411,5 +411,9 @@ main::before {
     transform: translateX(-1000px);
   }
 }
+.suggestions {
+  border: 1px solid salmon;
+  margin: 3.75rem 4.375rem;
+}
 
 /*# sourceMappingURL=style.css.map */

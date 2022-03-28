@@ -171,13 +171,22 @@
     </nav>
     <main class="flex-column">
       <section class="suggestions">
-        <div class="suggestions__back flex">
-          <img src="./assets/left-arrow.svg" alt="" class="suggestions__back-icon">
+        <button class="suggestions__back flex">
+          <figure class="suggestions__back-icon-wrapper flex">
+            <img
+              src="./assets/left-arrow.svg"
+              alt=""
+              class="suggestions__back-icon"
+            />
+          </figure>
           <p class="suggestions__back-label">Voltar</p>
-        </div>
+        </button>
         <header>
           <h1>Sugestões</h1>
-          <p>Diga-nos como podemos atender melhor os nossos clientes. Deixe aqui sua sugestão.</p>
+          <p>
+            Diga-nos como podemos atender melhor os nossos clientes. Deixe aqui
+            sua sugestão.
+          </p>
         </header>
         <div class="form">
           <p>Deixe-nos uma avaliação</p>
@@ -186,7 +195,10 @@
           </div>
           <form action="">
             <label for="suggestions__form">Sugestão</label>
-            <textarea name="suggestions__form" id="suggestions__form"></textarea>
+            <textarea
+              name="suggestions__form"
+              id="suggestions__form"
+            ></textarea>
             <button type="submit"><span>ENVIAR</span></button>
           </form>
         </div>

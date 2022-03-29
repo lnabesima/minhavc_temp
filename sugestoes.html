@@ -181,25 +181,56 @@
           </figure>
           <p class="suggestions__back-label">Voltar</p>
         </button>
-        <header>
-          <h1>Sugestões</h1>
-          <p>
-            Diga-nos como podemos atender melhor os nossos clientes. Deixe aqui
+
+        <header class="suggestions__header flex-column">
+          <h1 class="suggestions__header-title">Sugestões</h1>
+          <p class="suggestions__header-description">
+            Diga-nos como podemos melhor atender os nossos clientes. Deixe aqui
             sua sugestão.
           </p>
         </header>
-        <div class="form">
-          <p>Deixe-nos uma avaliação</p>
-          <div>
-            <span>*****</span>
+        <div class="suggestions__form">
+          <p class="suggestions__form-label">Deixe-nos uma avaliação!</p>
+          <div class="suggestions__form-stars flex">
+            <img
+              src="./assets/star-full.svg"
+              alt=""
+              class="suggestions__form-star"
+            />
+            <img
+              src="./assets/star-empty.svg"
+              alt=""
+              class="suggestions__form-star"
+            />
+            <img
+              src="./assets/star-empty.svg"
+              alt=""
+              class="suggestions__form-star"
+            />
+            <img
+              src="./assets/star-empty.svg"
+              alt=""
+              class="suggestions__form-star"
+            />
+            <img
+              src="./assets/star-empty.svg"
+              alt=""
+              class="suggestions__form-star"
+            />
           </div>
           <form action="">
-            <label for="suggestions__form">Sugestão</label>
+            <label for="suggestion__box" class="suggestions__form-label">
+              Sugestão
+            </label>
             <textarea
-              name="suggestions__form"
-              id="suggestions__form"
+              name="suggestion__box"
+              id="suggestion__box"
+              class="suggestions__form-box"
+              autocorrect="on"
             ></textarea>
-            <button type="submit"><span>ENVIAR</span></button>
+            <button type="submit" class="suggestions__form-submit">
+              <span>Enviar</span>
+            </button>
           </form>
         </div>
       </section>

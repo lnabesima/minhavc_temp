@@ -1,5 +1,5 @@
 .suggestions {
-  border: 1px solid salmon;
+  // border: 1px solid salmon;
   margin: calculateRem(60px) calculateRem(70px);
 
   &__back {
@@ -8,6 +8,7 @@
     align-items: center;
     gap: calculateRem(8px);
     cursor: pointer;
+    margin-bottom: calculateRem(16px);
 
     &-icon-wrapper {
       justify-content: center;
@@ -17,7 +18,7 @@
       height: calculateRem(40px);
       background: $secondary-color;
     }
-    
+
     &-icon {
       filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(118deg)
         brightness(105%) contrast(101%);
@@ -41,4 +42,91 @@
       }
     }
   }
+
+  &__header {
+    gap: calculateRem(7px);
+    margin-bottom: calculateRem(26px);
+    &-title {
+      font-weight: 700;
+      font-size: calculateRem(24px);
+      line-height: calculateRem(29.26px);
+      color: $secondary-color;
+    }
+
+    &-description {
+      font-size: calculateRem(14px);
+      line-height: calculateRem(17.07px);
+      color: $text-color;
+    }
+  }
+
+  &__form {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.15);
+    padding: calculateRem(16px);
+
+    &-label {
+      font-size: calculateRem(12px);
+      line-height: calculateRem(15px);
+      color: $text-color;
+    }
+
+    &-stars {
+      background-color: hsla(198, 16%, 84%, 0.2);
+      border-radius: 5px;
+      justify-content: center;
+      gap: calculateRem(10px);
+      padding-top: calculateRem(26px);
+      padding-bottom: calculateRem(29px);
+      margin-top: calculateRem(6px);
+      margin-bottom: calculateRem(12px);
+    }
+
+    &-box {
+      padding: 10px;
+      resize: none;
+      width: 100%;
+      height: calculateRem(80px);
+      border: 1px solid hsla(198, 16%, 84%, 1);
+      border-radius: 5px;
+      margin-top: calculateRem(6px);
+      margin-bottom: calculateRem(12px);
+    }
+
+    &-submit {
+      width: calculateRem(97px);
+      height: calculateRem(44px);
+      padding: calculateRem(12px) calculateRem(16px);
+      background-color: $secondary-color;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 2px 6px 0px hsla(0, 0%, 0%, 0.1);
+
+      &:active {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          linear-gradient(0deg, #5550b2, #5550b2);
+      }
+
+      span {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: calculateRem(16px);
+        line-height: calculateRem(20px);
+      }
+    }
+  }
+}
+
+// https://www.cssscript.com/star-rating-radio/
+.star {
+  fill: black;
 }

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- /Fonts -->
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- /Main CSS-->
+
+    <title>Minha Você</title>
+  </head>
+  <body class="flex">
+    <nav class="sidebar">
+      <!-- <div class="sidebar__container flex-column"> -->
+      <div class="sidebar__logo flex flex-center-between">
+        <img src="./assets/minhavoce.svg" alt="Logo da Minha Você" />
+        <img
+          src="./assets/left-arrow.svg"
+          alt="Seta apontada para esquerda"
+          class="sidebar__logo-back"
+        />
+      </div>
+
+      <div class="separator">
+        <div class="separator__proper"></div>
+      </div>
+
+      <div class="sidebar__profile flex profile">
+        <div class="profile__photo">
+          <img
+            src="./assets/profile.png"
+            alt="Imagem de Perfil"
+            class="profile__photo-proper"
+          />
+        </div>
+        <div class="profile__info flex-column">
+          <h2 class="profile__name ellipsis">Rafael Conde</h2>
+          <div class="profile__options flex">
+            <div class="profile__options-settings flex">
+              <img src="./assets/cog.svg" alt="Engrenagem" />
+              <p class="profile__options-label">Perfil</p>
+            </div>
+            <div class="profile__options-logout flex">
+              <img src="./assets/logout.svg" alt="Logout" />
+              <p class="profile__options-label">Sair</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar__container flex-column">
+        <ul class="sidebar__list">
+          <li class="sidebar__list-items item flex active">
+            <img src="./assets/home.svg" alt="" />
+            <p class="item__label">Home</p>
+          </li>
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/phone.svg" alt="" />
+            <p class="item__label">Meus Planos</p>
+            <img
+              src="./assets/down-triangle.svg"
+              alt=""
+              class="sidebar__list-more"
+            />
+          </li>
+
+          <ul class="sidebar__sublist list-hidden">
+            <li class="sidebar__sublist-items subitem flex subactive">
+              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Internet</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Telefone</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">TV</p>
+            </li>
+          </ul>
+
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/barcode.svg" alt="" />
+            <p class="item__label">Faturas</p>
+            <img
+              src="./assets/down-triangle.svg"
+              alt=""
+              class="sidebar__list-more"
+            />
+          </li>
+
+          <ul class="sidebar__sublist list-hidden">
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Fatura Atual</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Histórico de Pagamentos</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Notas Fiscais</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Declaração de Quitação de Débitos</p>
+            </li>
+          </ul>
+
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/headset.svg" alt="" />
+            <p class="item__label">Atendimentos</p>
+            <img
+              src="./assets/down-triangle.svg"
+              alt=""
+              class="sidebar__list-more"
+            />
+          </li>
+
+          <ul class="sidebar__sublist list-hidden">
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Suporte</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Endereço</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Ponto Interno</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Titularidade</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Mudança de Vencimento</p>
+            </li>
+            <li class="sidebar__sublist-items subitem flex">
+              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+              <p class="subitem__label">Meus atendimentos</p>
+            </li>
+          </ul>
+
+          <li class="sidebar__list-items item flex">
+            <img src="./assets/lightbulb.svg" alt="" />
+            <p class="item__label">Sugestões</p>
+          </li>
+          <li class="sidebar__list-items item flex" id="help">
+            <img src="./assets/text-ballon.svg" alt="" />
+            <p class="item__label">Ajuda</p>
+          </li>
+        </ul>
+
+        <div class="sidebar__footer">
+          <div class="sidebar__footer-container flex-column">
+            <img
+              src="./assets/logo.svg"
+              alt="Logo da Você Telecom"
+              class="sidebar__footer-logo"
+            />
+            <div class="sidebar__footer-separator">
+              <div class="separator__proper"></div>
+            </div>
+            <div class="sidebar__footer-copyright flex-column">
+              <p class="sidebar__footer-copyright1">Copyright ® 2022. v2.23.4</p>
+              <p class="sidebar__footer-copyright2">
+                Todos os direitos reservados.
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="flex-column">
+      <section id="content">
+        <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quaerat ipsam odio pariatur cum alias, officia, magni deserunt id molestias voluptate ut dolorem quos sequi repellendus! Blanditiis molestiae obcaecati rerum!</span><span>Architecto vel, explicabo eligendi ab, eius laudantium totam soluta quaerat earum pariatur quae tenetur voluptatum ipsam. Deleniti nemo cum doloremque quaerat perspiciatis necessitatibus. Nesciunt iste, consequatur asperiores vitae minus similique?</span><span>Maiores recusandae unde tenetur quam omnis dolores, saepe aspernatur iusto repellendus eaque dolor cumque dicta at quis minus expedita, vero perspiciatis iste repudiandae consequatur, sint provident optio distinctio facere. Nemo?</span><span>Dolor, ratione. Excepturi iste expedita magnam, ipsa officia aperiam quasi a nihil dicta sapiente neque placeat consectetur. Accusamus, laudantium assumenda totam repudiandae culpa, quis quo ex sapiente quisquam quos iste.</span><span>Eligendi alias aspernatur qui quo vitae itaque illo rerum repellendus, ea error, omnis facere dicta, quis aperiam voluptatibus pariatur! Illo voluptatum quas molestiae perspiciatis, vel ducimus consequatur porro a eum?</span></p>
+      </section>
+
+      <footer class="footer flex-column">
+        <div class="whatsapp flex">
+          <div class="whatsapp__button flex">
+            <a
+              href="https://wa.me/559633333333?text=Minha%20Voc%C3%AA,%20preciso%20abrir%20uma%20solicita%C3%A7%C3%A3o"
+              target="_blank"
+              class="whatsapp__button-label flex"
+            >
+              Precisa de ajuda?
+              <img
+                class="whatsapp__button-icon"
+                src="./assets/whatsapp.svg"
+                alt="Logo do Whatsapp"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__container flex">
+          <div class="footer__copyright">
+            <p class="footer__copyright-year">Copyright ® 2022. v2.23.4</p>
+            <p class="footer__copyright-proper">
+              Todos os direitos reservados.
+            </p>
+          </div>
+          <img src="./assets/logo.svg" alt="" />
+        </div>
+
+        <div class="footer__mobile">
+          <div class="footer__mobile-wrapper flex">
+            <div class="footer__mobile-options flex-column" id="mobile-menu">
+              <img
+                src="./assets/plus-icon.svg"
+                alt=""
+                class="footer__mobile-icon"
+              />
+              <p class="footer__mobile-label">Opções</p>
+            </div>
+            <div class="footer__mobile-options flex-column" id="mobile-plans">
+              <img
+                src="./assets/plans-icon.svg"
+                alt=""
+                class="footer__mobile-icon"
+              />
+              <p class="footer__mobile-label">Planos</p>
+            </div>
+            <div class="footer__mobile-options flex-column" id="mobile-home">
+              <img
+                src="./assets/home-icon.svg"
+                alt=""
+                class="footer__mobile-icon"
+              />
+              <p class="footer__mobile-label">Home</p>
+            </div>
+            <div class="footer__mobile-options flex-column" id="mobile-invoice">
+              <img
+                src="./assets/invoice-icon.svg"
+                alt=""
+                class="footer__mobile-icon"
+              />
+              <p class="footer__mobile-label">Faturas</p>
+            </div>
+            <div class="footer__mobile-options flex-column" id="mobile-profile">
+              <img
+                src="./assets/profile.png"
+                alt=""
+                class="footer__mobile-icon profile"
+              />
+              <p class="footer__mobile-label">Perfil</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 main {
   height: 100vh;
   width: 100%;
-  max-width: 100%;
 
   &::before {
     content: '';
@@ -24,5 +23,12 @@ main {
       background-size: auto;
     }
   }
-  
+}
+
+#content {
+  padding: calculateRem(50px) calculateRem(70px);
+  @include device('mobile') {
+    padding: calculateRem(50px) calculateRem(24px) calculateRem(25px)
+      calculateRem(30px);
+  }
 }

@@ -103,6 +103,7 @@ p {
   font-weight: 400;
   font-size: calculateRem(14px);
   line-height: calculateRem(17px);
+  color: $text-color;
 }
 
 label {

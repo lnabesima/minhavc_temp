@@ -29,4 +29,12 @@
       color: $secondary-color;
     }
   }
+
+  &__header{
+    margin-bottom: calculateRem(26px);
+    &-title{
+      color: $secondary-color;
+      margin-bottom: calculateRem(7px);
+    }
+  }
 }

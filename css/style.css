@@ -73,6 +73,7 @@ p {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.0625rem;
+  color: #434343;
 }
 
 label {
@@ -301,6 +302,13 @@ main::before {
   font-weight: 500;
   line-height: 1.25rem;
   color: #5550b2;
+}
+.suggestions__header {
+  margin-bottom: 1.625rem;
+}
+.suggestions__header-title {
+  color: #5550b2;
+  margin-bottom: 0.4375rem;
 }
 
 .footer {

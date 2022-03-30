@@ -396,6 +396,7 @@ main::before {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   background-color: #d9fdd3;
   justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1024px) {
   .whatsapp__button {
@@ -404,7 +405,7 @@ main::before {
 }
 .whatsapp__button-label {
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.066875rem;
   text-decoration: none;

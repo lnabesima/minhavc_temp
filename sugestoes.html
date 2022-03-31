@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <script
@@ -218,6 +218,17 @@
               alt=""
               class="suggestions__form-star"
             />
+            <div class="sidebar__footer-separator">
+              <div class="separator__proper"></div>
+            </div>
+            <div class="sidebar__footer-copyright flex-column">
+              <p class="sidebar__footer-copyright1">
+                Copyright ® 2022. v2.23.4
+              </p>
+              <p class="sidebar__footer-copyright2">
+                Todos os direitos reservados.
+              </p>
+            </div>
           </div>
           <form action="">
             <label for="suggestion__box" class="suggestions__form-label">
@@ -233,6 +244,74 @@
               <span>Enviar</span>
             </button>
           </form>
+        </div>
+      </div>
+    </nav>
+    <main class="flex-column">
+      <section id="content">
+        <div class="suggestions">
+          <button class="suggestions__back flex">
+            <figure class="suggestions__back-wrapper flex">
+              <img
+                src="./assets/left-arrow.svg"
+                alt=""
+                class="suggestions__back-icon"
+              />
+            </figure>
+            <p class="suggestions__back-label">Voltar</p>
+          </button>
+
+          <header class="suggestions__header">
+            <h1 class="suggestions__header-title">Sugestões</h1>
+            <p class="suggestions__header-description">
+              Diga-nos como podemos melhor atender os nossos clientes. Deixe
+              aqui sua sugestão.
+            </p>
+          </header>
+
+          <div class="suggestions__form">
+            <p class="suggestions__form-label">Deixe-nos uma avaliação!</p>
+            <div class="suggestions__form-rating flex">
+              <img
+                src="./assets/star-full.svg"
+                alt=""
+                class="suggestions__form-stars"
+              />
+              <img
+                src="./assets/star-empty.svg"
+                alt=""
+                class="suggestions__form-stars"
+              />
+              <img
+                src="./assets/star-empty.svg"
+                alt=""
+                class="suggestions__form-stars"
+              />
+              <img
+                src="./assets/star-empty.svg"
+                alt=""
+                class="suggestions__form-stars"
+              />
+              <img
+                src="./assets/star-empty.svg"
+                alt=""
+                class="suggestions__form-stars"
+              />
+            </div>
+
+            <label for="suggestions__box" class="suggestions__form-label">
+              Sugestão
+            </label>
+            <textarea
+              name="suggestions__box"
+              id="suggestions__box"
+              class="suggestions__form-box"
+              
+            ></textarea>
+            <button type="submit" class="suggestions__form-input">
+              Enviar
+            </button>
+          </div>
         </div>
       </section>
 

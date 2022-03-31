@@ -37,4 +37,13 @@
       margin-bottom: calculateRem(7px);
     }
   }
+
+  &__form{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.15);
+    height: calculateRem(300px);
+
+  
+  }
 }

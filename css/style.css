@@ -310,6 +310,12 @@ main::before {
   color: #5550b2;
   margin-bottom: 0.4375rem;
 }
+.suggestions__form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  height: 18.75rem;
+}
 
 .footer {
   margin-top: auto;

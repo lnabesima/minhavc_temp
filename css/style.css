@@ -315,6 +315,29 @@ main::before {
   border-radius: 10px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   height: 18.75rem;
+  padding: 1rem;
+}
+.suggestions__form-label {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #434343;
+  margin-bottom: 0.375rem;
+}
+.suggestions__form-rating {
+  background-color: rgba(208, 217, 221, 0.2);
+  justify-content: center;
+  padding-top: 1.625rem;
+  padding-bottom: 1.8125rem;
+  margin-bottom: 0.75rem;
+  border-radius: 5px;
+  gap: 0.625rem;
+}
+.suggestions__form-stars {
+  width: 1.57875rem;
+  height: 1.5rem;
 }
 
 .footer {

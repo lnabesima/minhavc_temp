@@ -30,20 +30,44 @@
     }
   }
 
-  &__header{
+  &__header {
     margin-bottom: calculateRem(26px);
-    &-title{
+    &-title {
       color: $secondary-color;
       margin-bottom: calculateRem(7px);
     }
   }
 
-  &__form{
+  &__form {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.15);
     height: calculateRem(300px);
+    padding: calculateRem(16px);
 
-  
+    &-label {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: $text-color;
+      margin-bottom: calculateRem(6px);
+    }
+
+    &-rating {
+      background-color: hsla(198, 16%, 84%, 0.2);
+      justify-content: center;
+      padding-top: calculateRem(26px);
+      padding-bottom: calculateRem(29px);
+      margin-bottom: calculateRem(12px);
+      border-radius: 5px;
+      gap: calculateRem(10px);
+    }
+
+    &-stars {
+      width: calculateRem(25.26px);
+      height: calculateRem(24px);
+    }
   }
 }

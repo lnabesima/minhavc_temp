@@ -69,5 +69,14 @@
       width: calculateRem(25.26px);
       height: calculateRem(24px);
     }
+
+    &-box{
+      width: 100%;
+      height: calculateRem(80px);
+      border: 1px solid hsla(198, 16%, 84%, 1);
+      border-radius: 5px;
+      resize: none;
+      padding: calculateRem(5px);
+    }
   }
 }

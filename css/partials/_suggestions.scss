@@ -69,9 +69,13 @@
     &-stars {
       width: calculateRem(25.26px);
       height: calculateRem(24px);
+
+      &.full {
+        content: url(../../assets/star-full.svg);
+      }
     }
 
-    &-box{
+    &-box {
       width: 100%;
       height: calculateRem(80px);
       border: 1px solid hsla(198, 16%, 84%, 1);
@@ -81,7 +85,7 @@
       margin-bottom: calculateRem(12px);
     }
 
-    &-input{
+    &-input {
       width: calculateRem(97px);
       height: calculateRem(44px);
       border: none;
@@ -96,7 +100,7 @@
       font-size: calculateRem(16px);
       line-height: calculateRem(20px);
 
-      @include device('mobile'){
+      @include device('mobile') {
         width: 100%;
       }
     }

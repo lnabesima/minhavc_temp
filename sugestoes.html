@@ -219,26 +219,31 @@
             <p class="suggestions__form-label">Deixe-nos uma avaliação!</p>
             <div class="suggestions__form-rating flex">
               <img
-                src="./assets/star-full.svg"
+                data-rating="1"
+                src="./assets/star-empty.svg"
                 alt=""
-                class="suggestions__form-stars"
+                class="suggestions__form-stars full"
               />
               <img
+                data-rating="2"
                 src="./assets/star-empty.svg"
                 alt=""
                 class="suggestions__form-stars"
               />
               <img
+                data-rating="3"
                 src="./assets/star-empty.svg"
                 alt=""
                 class="suggestions__form-stars"
               />
               <img
+                data-rating="4"
                 src="./assets/star-empty.svg"
                 alt=""
                 class="suggestions__form-stars"
               />
               <img
+                data-rating="5"
                 src="./assets/star-empty.svg"
                 alt=""
                 class="suggestions__form-stars"
@@ -252,7 +257,6 @@
               name="suggestions__box"
               id="suggestions__box"
               class="suggestions__form-box"
-              
             ></textarea>
             <button type="submit" class="suggestions__form-input">
               Enviar
@@ -336,5 +340,6 @@
       </footer>
     </main>
     <script src="./script.js"></script>
+    <script src="./js/starRating.js"></script>
   </body>
 </html>

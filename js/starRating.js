@@ -22,24 +22,25 @@ function renderChanges(rating) {
 
 function onMouseClick(ev) {
   let star = ev.target;
-  console.log(star);
   let isStar = star.classList.contains('suggestions__form-stars');
-  console.log(isStar);
   if (isStar) {
     let { rating } = star.dataset;
-    console.log(rating);
     rating = rating === getRating() ? 0 : rating;
     changeRating(rating);
     renderChanges(rating);
   }
 }
 
-function onMouseOver() {
-  console.log('move');
+function onMouseOver(ev) {
+  let isStar = ev.target.classList.contains('suggestions__form-stars');
+  if (isStar) {
+    const { rating } = ev.target.dataset;
+    renderChanges(rating);
+  }
 }
 
-function onMouseLeave() {
-  console.log('out');
+function onMouseLeave(ev) {
+  renderChanges(rating);
 }
 
 function starRating() {

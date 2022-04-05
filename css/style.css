@@ -369,6 +369,9 @@ main::before {
   font-size: 1rem;
   line-height: 1.25rem;
 }
+.suggestions__form-input:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #5550b2, #5550b2);
+}
 @media (max-width: 1024px) {
   .suggestions__form-input {
     width: 100%;

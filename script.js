@@ -10,9 +10,7 @@ const mobileMenu = document.querySelector('#mobile-menu');
 const goBackButton = document.querySelector('.go-back');
 
 /* Go Back Button */
-goBackButton.addEventListener('click', () => {
-  history.back();
-});
+if (goBackButton) goBackButton.addEventListener('click', () => history.back());
 
 $('.sidebar__list').on('click', 'li', function () {
   // seleciona todos os items que tem a classe 'open'

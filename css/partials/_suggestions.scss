@@ -111,6 +111,15 @@
       font-size: calculateRem(16px);
       line-height: calculateRem(20px);
 
+      &:active {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          linear-gradient(0deg, #5550b2, #5550b2);
+      }
+
       @include device('mobile') {
         width: 100%;
       }

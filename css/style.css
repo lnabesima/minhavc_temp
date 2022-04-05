@@ -105,6 +105,7 @@ label {
   padding: 1.3125rem 1.0625rem 1.3125rem 1rem;
 }
 .sidebar__logo-back {
+  filter: invert(30%) sepia(69%) saturate(947%) hue-rotate(213deg) brightness(89%) contrast(88%);
   cursor: pointer;
 }
 .sidebar .separator {
@@ -475,47 +476,6 @@ main::before {
 }
 .whatsapp__button:active {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(0deg, #d9fdd3, #d9fdd3);
-}
-
-@-webkit-keyframes slide-in-left {
-  from {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-  }
-  to {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@keyframes slide-in-left {
-  from {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-  }
-  to {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-  }
-}
-@keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

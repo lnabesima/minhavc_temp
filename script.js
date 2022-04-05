@@ -7,6 +7,12 @@ const footerOptions = document.querySelectorAll('.footer__mobile-options');
 const footerIcon = document.querySelectorAll('.footer__mobile-icon');
 const footerLabel = document.querySelectorAll('.footer__mobile-label');
 const mobileMenu = document.querySelector('#mobile-menu');
+const goBackButton = document.querySelector('.go-back');
+
+/* Go Back Button */
+goBackButton.addEventListener('click', () => {
+  history.back();
+});
 
 $('.sidebar__list').on('click', 'li', function () {
   // seleciona todos os items que tem a classe 'open'
@@ -49,7 +55,7 @@ listItems.forEach(item => {
       subitem.classList.remove('subactive');
     });
     item.classList.add('active');
-    if (item.id == "help") {
+    if (item.id == 'help') {
       sidebar.classList.remove('opened');
     }
   });
@@ -83,7 +89,6 @@ footerOptions.forEach(option => {
 
 mobileMenu.addEventListener('click', () => {
   sidebar.classList.add('opened');
-
 });
 
 /*/Mobile footer*/

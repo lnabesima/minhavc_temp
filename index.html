@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <script
@@ -66,10 +66,13 @@
 
       <div class="sidebar__container flex-column">
         <ul class="sidebar__list">
-          <li class="sidebar__list-items item flex active">
-            <img src="./assets/home.svg" alt="" />
-            <p class="item__label">Home</p>
+          <li class="item">
+            <a href="/" class="sidebar__list-items flex active">
+              <img src="./assets/home.svg" alt="" />
+              <p class="item__label">Home</p>
+            </a>
           </li>
+
           <li class="sidebar__list-items item flex">
             <img src="./assets/phone.svg" alt="" />
             <p class="item__label">Meus Planos</p>
@@ -81,17 +84,23 @@
           </li>
 
           <ul class="sidebar__sublist list-hidden">
-            <li class="sidebar__sublist-items subitem flex subactive">
-              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Internet</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Internet</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Telefone</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Telefone</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/phone.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">TV</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/phone.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">TV</p>
+              </a>
             </li>
           </ul>
 
@@ -104,23 +113,30 @@
               class="sidebar__list-more"
             />
           </li>
-
           <ul class="sidebar__sublist list-hidden">
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Fatura Atual</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Fatura Atual</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Histórico de Pagamentos</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Histórico de Pagamentos</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Notas Fiscais</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Notas Fiscais</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Declaração de Quitação de Débitos</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Declaração de Quitação de Débitos</p>
+              </a>
             </li>
           </ul>
 
@@ -135,39 +151,55 @@
           </li>
 
           <ul class="sidebar__sublist list-hidden">
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Suporte</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Suporte</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Mudança de Endereço</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Mudança de Endereço</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Mudança de Ponto Interno</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Mudança de Ponto Interno</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Mudança de Titularidade</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Mudança de Titularidade</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Mudança de Vencimento</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Mudança de Vencimento</p>
+              </a>
             </li>
-            <li class="sidebar__sublist-items subitem flex">
-              <img src="./assets/headset.svg" alt="" class="hidden-icon" />
-              <p class="subitem__label">Meus atendimentos</p>
+            <li class="subitem">
+              <a href="#" class="sidebar__sublist-items flex">
+                <img src="./assets/headset.svg" alt="" class="hidden-icon" />
+                <p class="subitem__label">Meus atendimentos</p>
+              </a>
             </li>
           </ul>
 
-          <li class="sidebar__list-items item flex">
-            <img src="./assets/lightbulb.svg" alt="" />
-            <p class="item__label">Sugestões</p>
+          <li class="item">
+            <a href="/sugestoes.html" class="sidebar__list-items flex">
+              <img src="./assets/lightbulb.svg" alt="" />
+              <p class="item__label">Sugestões</p>
+            </a>
           </li>
-          <li class="sidebar__list-items item flex" id="help">
-            <img src="./assets/text-ballon.svg" alt="" />
-            <p class="item__label">Ajuda</p>
+          <li class="item" id="help">
+            <a href="#" class="sidebar__list-items flex">
+              <img src="./assets/text-ballon.svg" alt="" />
+              <p class="item__label">Ajuda</p>
+            </a>
           </li>
         </ul>
 

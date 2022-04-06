@@ -1,7 +1,9 @@
 main {
-  min-height: 100%;
   height: 100vh;
   width: 100%;
+  //the overflow was needed to create a scroll on the content area when it was bigger
+  //than the viewport and maintain the navbar fixed 
+  overflow-y: auto;
 
   &::before {
     content: '';

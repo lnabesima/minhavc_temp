@@ -21,7 +21,8 @@ gambiarra. */
       calculateRem(16px);
 
     &-back {
-      filter: invert(27%) sepia(66%) saturate(1583%) hue-rotate(224deg) brightness(91%) contrast(80%);
+      filter: invert(30%) sepia(69%) saturate(947%) hue-rotate(213deg)
+        brightness(89%) contrast(88%);
       cursor: pointer;
     }
   }
@@ -141,6 +142,7 @@ gambiarra. */
       calculateRem(16px);
     gap: calculateRem(11px);
     cursor: pointer;
+    text-decoration: none;
   }
 
   &-more {

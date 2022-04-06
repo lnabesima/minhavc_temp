@@ -1,3 +1,7 @@
+let suggestionsInfo = {};
+const inputButton = document.querySelector('.suggestions__form-submit');
+const suggestionsBox = document.querySelector('.suggestions__form-box');
+
 /* ---- STAR RATING COMPONENT ----*/
 // Adaptado de https://blog.lakbychance.com/implementing-a-star-rating-component-in-vanilla-js
 // Talvez adaptado seja um eufemismo; foi praticamente copiado mesmo. 🤷‍♂️️🤦‍♂️️
@@ -70,11 +74,23 @@ function onMouseLeave(ev) {
   renderChanges(rating);
 }
 
+function saveSuggestion(event){
+  event.preventDefault();
+  suggestionsInfo.rating = rating;
+  suggestionsInfo.suggestion = suggestionsBox.value;
+
+  changeRating(0);
+  renderChanges(0);
+  suggestionsBox.value = "";
+
+}
+
 // adiciona os eventos ao container de estrelas
-function starRating() {
+function initSuggestions() {
   starContainer.addEventListener('mousemove', onMouseOver);
   starContainer.addEventListener('mouseleave', onMouseLeave);
   starContainer.addEventListener('click', onMouseClick);
+  inputButton.addEventListener('click', saveSuggestion);
 }
 
-starRating();
+initSuggestions();

@@ -1,6 +1,9 @@
 let suggestionsInfo = {};
 const inputButton = document.querySelector('.suggestions__form-submit');
 const suggestionsBox = document.querySelector('.suggestions__form-box');
+const sectionBox = document.querySelector('.suggestions__form');
+const snackbar = document.querySelector('.suggestions__snackbar');
+const snackProper = document.querySelector('.suggestions__snackbar-proper');
 
 /* ---- STAR RATING COMPONENT ----*/
 // Adaptado de https://blog.lakbychance.com/implementing-a-star-rating-component-in-vanilla-js
@@ -74,15 +77,51 @@ function onMouseLeave(ev) {
   renderChanges(rating);
 }
 
-function saveSuggestion(event){
-  event.preventDefault();
-  suggestionsInfo.rating = rating;
-  suggestionsInfo.suggestion = suggestionsBox.value;
+// isso é uma gambiarra MONSTRA 🤷‍♂️️
+// definimos a largura do container da snackbar para ser igual ao
+// da sectionBox e subtrai 2rem, que é o padding de cada lado
+// isso para podermos centralizar o snackbar
+snackbar.style.width = `calc(${sectionBox.offsetWidth}px - 2rem)`;
 
-  changeRating(0);
-  renderChanges(0);
-  suggestionsBox.value = "";
+// função para animação do snackbar
+function animationSnackbar() {
+  if (snackProper.classList.contains('hidden')) {
+    // verifica se o snackbar contêm a classe hidden
+    snackProper.classList.remove('hidden'); //se tiver, remove a classe `hidden`
+    // após 2ms, remove a classe `visuallyhidden`
+    // isso é importante porque o esmaecimento vem nessa classe, já que não conseguimos
+    // aplicar o transition na propriedade `display`
+    setTimeout(() => snackProper.classList.remove('visuallyhidden'), 20);
+  }
+  setTimeout(() => {
+    // cria um novo timer
+    snackProper.classList.add('visuallyhidden'); // remove a classe `visuallyhidden`
+    snackProper.addEventListener(
+      'transitionend', // aguarda a transição acabar
+      function (e) {
+        snackProper.classList.add('hidden'); // adiciona a classe `hidden`
+      },
+      {
+        once: true, // apenas uma vez
+      }
+    );
+  }, 1500); // após 1,5s
+}
 
+function saveSuggestion(event) {
+  event.preventDefault(); // evita o comportamento padrão do botão
+  if (rating !== 0 || suggestionsBox.value != '') {
+    suggestionsInfo.rating = rating; // salva o rating no objeto `suggestionsInfo`
+    suggestionsInfo.suggestion = suggestionsBox.value; // salva a sugestão no objeto `suggestionsInfo`
+
+    JSON.stringify(suggestionsInfo); // parseia o obj `suggestionsInfo` em string para salvar em DB
+
+    changeRating(0); // retorna o rating para 0
+    renderChanges(0); // renderiza a mudança na tela
+    suggestionsBox.value = ''; // limpa a suggestionBox
+
+    animationSnackbar(); // chama a função que anima o snackbar
+  }
 }
 
 // adiciona os eventos ao container de estrelas

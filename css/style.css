@@ -24,6 +24,10 @@
   text-overflow: ellipsis;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Media Queries */
 /* /Media Queries */
 /* /Custom Utility Classes */
@@ -377,6 +381,31 @@ main::before {
   .suggestions__form-submit {
     width: 100%;
   }
+}
+.suggestions__snackbar {
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+}
+.suggestions__snackbar-proper {
+  width: 31.25rem;
+  height: 3.25rem;
+  background-color: #00c853;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+.suggestions__snackbar-label {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.21875rem;
+  text-align: center;
+}
+
+.visuallyhidden {
+  opacity: 0;
 }
 
 .footer {

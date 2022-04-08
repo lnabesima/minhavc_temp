@@ -27,7 +27,6 @@
   </head>
   <body class="flex">
     <nav class="sidebar">
-      <!-- <div class="sidebar__container flex-column"> -->
       <div class="sidebar__logo flex flex-center-between">
         <img src="./assets/minhavoce.svg" alt="Logo da Minha Você" />
         <img
@@ -67,7 +66,7 @@
       <div class="sidebar__container flex-column">
         <ul class="sidebar__list">
           <li class="item">
-            <a href="/" class="sidebar__list-items flex active">
+            <a href="/" class="sidebar__list-items flex">
               <img src="./assets/home.svg" alt="" />
               <p class="item__label">Home</p>
             </a>
@@ -104,7 +103,7 @@
             </li>
           </ul>
 
-          <li class="sidebar__list-items item flex">
+          <li class="sidebar__list-items item flex active">
             <img src="./assets/barcode.svg" alt="" />
             <p class="item__label">Faturas</p>
             <img
@@ -115,7 +114,7 @@
           </li>
           <ul class="sidebar__sublist list-hidden">
             <li class="subitem">
-              <a href="#" class="sidebar__sublist-items flex">
+              <a href="#" class="sidebar__sublist-items flex subactive">
                 <img src="./assets/barcode.svg" alt="" class="hidden-icon" />
                 <p class="subitem__label">Fatura Atual</p>
               </a>
@@ -214,18 +213,172 @@
               <div class="separator__proper"></div>
             </div>
             <div class="sidebar__footer-copyright flex-column">
-              <p class="sidebar__footer-copyright1">Copyright ® 2022. v2.23.4</p>
+              <p class="sidebar__footer-copyright1">
+                Copyright ® 2022. v2.23.4
+              </p>
               <p class="sidebar__footer-copyright2">
                 Todos os direitos reservados.
+              </p>
             </div>
-            </p>
           </div>
         </div>
       </div>
     </nav>
     <main class="flex-column">
       <section id="content">
-        <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quaerat ipsam odio pariatur cum alias, officia, magni deserunt id molestias voluptate ut dolorem quos sequi repellendus! Blanditiis molestiae obcaecati rerum!</span><span>Architecto vel, explicabo eligendi ab, eius laudantium totam soluta quaerat earum pariatur quae tenetur voluptatum ipsam. Deleniti nemo cum doloremque quaerat perspiciatis necessitatibus. Nesciunt iste, consequatur asperiores vitae minus similique?</span><span>Maiores recusandae unde tenetur quam omnis dolores, saepe aspernatur iusto repellendus eaque dolor cumque dicta at quis minus expedita, vero perspiciatis iste repudiandae consequatur, sint provident optio distinctio facere. Nemo?</span><span>Dolor, ratione. Excepturi iste expedita magnam, ipsa officia aperiam quasi a nihil dicta sapiente neque placeat consectetur. Accusamus, laudantium assumenda totam repudiandae culpa, quis quo ex sapiente quisquam quos iste.</span><span>Eligendi alias aspernatur qui quo vitae itaque illo rerum repellendus, ea error, omnis facere dicta, quis aperiam voluptatibus pariatur! Illo voluptatum quas molestiae perspiciatis, vel ducimus consequatur porro a eum?</span></p>
+        <div class="bill">
+          <button class="bill__back flex go-back">
+            <figure class="bill__back-wrapper go-back-wrapper flex">
+              <img
+                src="./assets/left-arrow.svg"
+                alt=""
+                class="bill__back-icon go-back-icon"
+              />
+            </figure>
+            <p class="bill__back-label go-back-label">Voltar</p>
+          </button>
+
+          <header class="bill__header">
+            <h1 class="bill__header-title">Fatura Atual</h1>
+            <p class="bill__header-description">
+              Verifique os status de suas faturas, gere a segunda via e pague
+              ela diretamente por aqui.
+            </p>
+          </header>
+
+          <article class="bill__main">
+            <fieldset class="bill__main-container container">
+              <div class="container__plan">
+                <form action="" class="container__plan-form flex-column">
+                  <label for="plan" class="container__plan-label">Plano</label>
+                  <select name="plan" id="plan" class="container__plan-select">
+                    <option
+                      value="(27) 1000-MEGA VCT RES ULTRA"
+                      class="container__plan-option"
+                    >
+                      (27) 1000-MEGA VCT RES ULTRA
+                    </option>
+                  </select>
+                </form>
+
+                <form action="" class="container__address flex-column">
+                  <label for="address" class="container__address-label">
+                    Endereço Instalado
+                  </label>
+                  <select
+                    name="address"
+                    id="address"
+                    class="container__address-select"
+                    disabled
+                  >
+                    <option value="1" class="container__address option">
+                      RUA DEOLINDA GOME 463 - CENTRO
+                    </option>
+                  </select>
+                </form>
+              </div>
+
+              <button type="submit" class="container__button">Consultar</button>
+            </fieldset>
+
+            <div class="bill__main-actual actual">
+              <h2 class="actual-title">Fatura Atual</h2>
+              <div class="actual__invoice">
+                <div class="actual__wrapper">
+                  <div class="green-detail"></div>
+                  <p class="actual__price">
+                    R$
+                    <span class="actual__price-number">199,99</span>
+                  </p>
+                  <div class="actual__reference">
+                    <p class="actual__reference-title">Mês de Referência</p>
+                    <p class="actual__reference-date">00/0000</p>
+                  </div>
+                  <div class="actual__status">
+                    <p class="actual__status-title">Situação</p>
+                    <p class="actual__status-status">Pago</p>
+                  </div>
+                  <div class="actual__duedate">
+                    <p class="actual__duedate-title">Vencimento</p>
+                    <p class="actual__duedate-date">00/00/0000</p>
+                  </div>
+                  <div class="actual__name">
+                    <p class="actual__name-title">Titular</p>
+                    <p class="actual__name-name">Nome Titular Completo</p>
+                  </div>
+                  <div class="actual__barcode">
+                    <p class="actual__barcode-title">Código de Barras</p>
+                    <p class="actual__barcode-proper">
+                      00000.00000 00000.000000 00000.000000 0 000000000000000
+                    </p>
+                  </div>
+                </div>
+                <div class="bill__controls">
+                  <button class="bill__controls-copy" data-control="actual">
+                    Copiar Código de Barras
+                  </button>
+                  <button class="bill__controls-email" data-control="actual">
+                    Enviar por e-mail
+                  </button>
+                  <button class="bill__controls-card" data-control="actual">
+                    Pagar com cartão de crédito
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bill__main-overdue overdue">
+              <h2 class="overdue__title">Faturas atrasadas</h2>
+              <div class="overdue__invoice">
+                <p class="">Não há faturas atrasadas para este plano</p>
+              </div>
+            </div>
+
+            <div class="bill__main-overdue overdue">
+              <h2 class="overdue__title">Faturas atrasadas</h2>
+              <div class="overdue__container">
+                <div class="green-detail"></div>
+                <p class="overdue__price">
+                  R$
+                  <span class="overdue__price-number">199,99</span>
+                </p>
+                <div class="overdue__reference">
+                  <p class="overdue__reference-title">Mês de Referência</p>
+                  <p class="overdue__reference-date">00/0000</p>
+                </div>
+                <div class="overdue__status">
+                  <p class="overdue__status-title">Situação</p>
+                  <p class="overdue__status-status">Pago</p>
+                </div>
+                <div class="overdue__duedate">
+                  <p class="overdue__duedate-title">Vencimento</p>
+                  <p class="overdue__duedate-date">00/00/0000</p>
+                </div>
+                <div class="overdue__name">
+                  <p class="overdue__name-title">Titular</p>
+                  <p class="overdue__name-name">Nome Titular Completo</p>
+                </div>
+                <div class="overdue__barcode">
+                  <p class="overdue__barcode-title">Código de Barras</p>
+                  <p class="overdue__barcode-proper">
+                    00000.00000 00000.000000 00000.000000 0 000000000000000
+                  </p>
+                </div>
+              </div>
+              <div class="bill__controls">
+                <button class="bill__controls-copy" data-control="overdue">
+                  Copiar Código de Barras
+                </button>
+                <button class="bill__controls-email" data-control="overdue">
+                  Enviar por e-mail
+                </button>
+                <button class="bill__controls-card" data-control="overdue">
+                  Pagar com cartão de crédito
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <footer class="footer flex-column">

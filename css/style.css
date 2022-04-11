@@ -457,8 +457,15 @@ main::before {
   margin-bottom: 0.75rem;
   grid-template-columns: 1fr 2fr;
 }
+@media (max-width: 1024px) {
+  .form-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 .form-wrapper__plan, .form-wrapper__address {
   gap: 0.375rem;
+  min-width: 0;
 }
 .form-wrapper__plan-select, .form-wrapper__address-select {
   height: 2.5rem;
@@ -467,6 +474,15 @@ main::before {
   border-radius: 5px;
   padding: 0.6875rem 0.875rem;
   color: rgba(69, 90, 99, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1024px) {
+  .form-wrapper__plan-select, .form-wrapper__address-select {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
 }
 .form-wrapper__plan-option, .form-wrapper__address-option {
   background-color: white;

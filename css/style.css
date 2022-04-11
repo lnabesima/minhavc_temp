@@ -435,6 +435,11 @@ main::before {
   gap: 0.5rem;
   justify-content: end;
 }
+@media (max-width: 1024px) {
+  .bill__controls {
+    margin-top: 1.5rem;
+  }
+}
 .bill__controls-copy, .bill__controls-email, .bill__controls-card {
   border: 1.5px solid white;
   background: none;
@@ -446,6 +451,11 @@ main::before {
   font-size: 1rem;
   line-height: 1.21875rem;
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .bill__controls-copy, .bill__controls-email, .bill__controls-card {
+    width: 100%;
+  }
 }
 .bill__controls-link {
   text-decoration: none;
@@ -503,6 +513,11 @@ main::before {
   cursor: pointer;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 1024px) {
+  .form-wrapper__button {
+    width: 100%;
+  }
+}
 .form-wrapper__button:active {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #5550b2, #5550b2);
 }
@@ -522,6 +537,12 @@ main::before {
   margin-bottom: 1.5rem;
   justify-content: space-between;
 }
+@media (max-width: 1024px) {
+  .actual__invoice,
+.overdue__invoice {
+    flex-direction: column;
+  }
+}
 .actual__invoice-no-overdue,
 .overdue__invoice-no-overdue {
   font-weight: 600;
@@ -536,6 +557,13 @@ main::before {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 0.9375rem;
+}
+@media (max-width: 1024px) {
+  .actual__wrapper,
+.overdue__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 .actual__price,
 .overdue__price {
@@ -581,6 +609,17 @@ main::before {
 .overdue__barcode {
   grid-column-start: 1;
   grid-column-end: 5;
+}
+@media (max-width: 1024px) {
+  .actual__price, .actual__barcode,
+.overdue__price,
+.overdue__barcode {
+    grid-column-end: 3;
+  }
+}
+
+.overdue:last-child {
+  margin-bottom: -1.5rem;
 }
 
 .green-detail {

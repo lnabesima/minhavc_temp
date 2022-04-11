@@ -21,6 +21,11 @@
   &__controls {
     gap: calculateRem(8px);
     justify-content: end;
+
+    @include device('mobile') {
+      margin-top: calculateRem(24px);
+    }
+
     &-copy,
     &-email,
     &-card {
@@ -34,6 +39,10 @@
       font-size: calculateRem(16px);
       line-height: calculateRem(19.5px);
       cursor: pointer;
+
+      @include device('mobile') {
+        width: 100%;
+      }
     }
     &-link {
       text-decoration: none;
@@ -95,6 +104,10 @@
     cursor: pointer;
     margin-bottom: calculateRem(24px);
 
+    @include device('mobile') {
+      width: 100%;
+    }
+
     &:active {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
         linear-gradient(0deg, #5550b2, #5550b2);
@@ -118,6 +131,10 @@
     margin-bottom: calculateRem(24px);
     justify-content: space-between;
 
+    @include device('mobile') {
+      flex-direction: column;
+    }
+
     &-no-overdue {
       font-weight: 600;
       font-size: calculateRem(20px);
@@ -134,6 +151,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: calculateRem(15px);
+
+    @include device('mobile') {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
   }
 
   &__price {
@@ -176,6 +198,16 @@
   &__barcode {
     grid-column-start: 1;
     grid-column-end: 5;
+
+    @include device('mobile') {
+      grid-column-end: 3;
+    }
+  }
+}
+
+.overdue {
+  &:last-child {
+    margin-bottom: calculateRem(-24px);
   }
 }
 

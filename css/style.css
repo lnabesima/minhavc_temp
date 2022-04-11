@@ -431,6 +431,26 @@ main::before {
 .bill__main-form-wrapper {
   border: none;
 }
+.bill__controls {
+  gap: 0.5rem;
+  justify-content: end;
+}
+.bill__controls-copy, .bill__controls-email, .bill__controls-card {
+  border: 1.5px solid white;
+  background: none;
+  width: 16.9375rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.21875rem;
+  cursor: pointer;
+}
+.bill__controls-link {
+  text-decoration: none;
+  color: white;
+}
 
 .form-wrapper {
   gap: 0.98125rem;
@@ -472,6 +492,7 @@ main::before {
   padding: 1.125rem 1rem 0.8125rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
+  justify-content: space-between;
 }
 .actual__invoice-no-overdue,
 .overdue__invoice-no-overdue {

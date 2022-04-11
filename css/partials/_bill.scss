@@ -17,6 +17,29 @@
       border: none;
     }
   }
+
+  &__controls {
+    gap: calculateRem(8px);
+    justify-content: end;
+    &-copy,
+    &-email,
+    &-card {
+      border: 1.5px solid white;
+      background: none;
+      width: calculateRem(271px);
+      height: calculateRem(40px);
+      border-radius: 5px;
+      color: white;
+      font-weight: 700;
+      font-size: calculateRem(16px);
+      line-height: calculateRem(19.5px);
+      cursor: pointer;
+    }
+    &-link {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
 
 .form-wrapper {
@@ -64,14 +87,16 @@
     padding: calculateRem(18px) calculateRem(16px) calculateRem(13px);
     border-radius: 10px;
     margin-bottom: calculateRem(24px);
+    justify-content: space-between;
 
-    &-no-overdue{
+    &-no-overdue {
       font-weight: 600;
       font-size: calculateRem(20px);
       line-height: (24.38px);
       color: white;
       // no design está 40px, mas a classe `overdue_invoice` já tem um margin-bottom de 24px
-      margin-bottom: calculateRem(16px)
+      // por isso foi adicionado apenas 16px
+      margin-bottom: calculateRem(16px);
     }
   }
 
@@ -82,7 +107,7 @@
     gap: calculateRem(15px);
   }
 
-  &__price{
+  &__price {
     font-weight: 600;
     font-size: calculateRem(20px);
     line-height: (24.38px);

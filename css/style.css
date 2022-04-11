@@ -76,12 +76,17 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1.0625rem;
+  line-height: 1.066875rem;
   color: #434343;
 }
 
 label {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
+  line-height: 0.9375rem;
+  color: #434343;
 }
 
 .hidden-icon {
@@ -314,36 +319,6 @@ main::before {
   }
 }
 
-.suggestions__back {
-  border: none;
-  background: none;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-.suggestions__back-wrapper {
-  align-items: center;
-  justify-content: center;
-  background-color: #5550b2;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-}
-.suggestions__back:active .suggestions__back-wrapper {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #5550b2, #5550b2);
-}
-.suggestions__back-icon {
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(35deg) brightness(109%) contrast(106%);
-}
-.suggestions__back-label {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.25rem;
-  color: #5550b2;
-}
 .suggestions__header {
   margin-bottom: 1.625rem;
 }
@@ -438,6 +413,124 @@ main::before {
 
 .visuallyhidden {
   opacity: 0;
+}
+
+.bill__header {
+  margin-bottom: 1.625rem;
+}
+.bill__header-title {
+  color: #5550b2;
+  margin-bottom: 0.4375rem;
+}
+.bill__main {
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.bill__main-form-wrapper {
+  border: none;
+}
+
+.form-wrapper {
+  gap: 0.98125rem;
+  margin-bottom: 0.75rem;
+}
+.form-wrapper__plan, .form-wrapper__address {
+  gap: 0.375rem;
+}
+.form-wrapper__button {
+  background-color: #5550b2;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  width: 8.4375rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+.form-wrapper__button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #5550b2, #5550b2);
+}
+
+.actual__title,
+.overdue__title {
+  color: #ff5900;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.actual__invoice,
+.overdue__invoice {
+  background: linear-gradient(108.63deg, #5550b2 0%, #6d66e8 100.87%);
+  padding: 1.125rem 1rem 0.8125rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.actual__wrapper,
+.overdue__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.9375rem;
+}
+.actual__price,
+.overdue__price {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 24.38px;
+  color: white;
+}
+.actual__price-number,
+.overdue__price-number {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.7425rem;
+}
+.actual__reference-title, .actual__status-title, .actual__duedate-title, .actual__name-title, .actual__barcode-title,
+.overdue__reference-title,
+.overdue__status-title,
+.overdue__duedate-title,
+.overdue__name-title,
+.overdue__barcode-title {
+  color: white;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  line-height: 0.838125rem;
+}
+.actual__reference-proper, .actual__status-proper, .actual__duedate-proper, .actual__name-proper, .actual__barcode-proper,
+.overdue__reference-proper,
+.overdue__status-proper,
+.overdue__duedate-proper,
+.overdue__name-proper,
+.overdue__barcode-proper {
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.066875rem;
+}
+.actual__status-proper,
+.overdue__status-proper {
+  text-transform: uppercase;
+}
+.actual__price, .actual__barcode,
+.overdue__price,
+.overdue__barcode {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.green-detail {
+  height: 0.3125rem;
+  width: 5.63375rem;
+  background-color: #00c853;
+  border-radius: 5px;
 }
 
 .footer {

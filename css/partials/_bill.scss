@@ -1,0 +1,124 @@
+.bill {
+  &__header {
+    &-title {
+      color: $secondary-color;
+      margin-bottom: calculateRem(7px);
+    }
+    margin-bottom: calculateRem(26px);
+  }
+
+  &__main {
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.15);
+    padding: calculateRem(16px);
+    border-radius: 10px;
+
+    &-form-wrapper {
+      border: none;
+    }
+  }
+}
+
+.form-wrapper {
+  gap: calculateRem(15.7px);
+  margin-bottom: calculateRem(12px);
+  &__plan,
+  &__address {
+    gap: calculateRem(6px);
+  }
+
+  &__button {
+    background-color: $secondary-color;
+    box-shadow: 0px 2px 6px 0px hsla(0, 0%, 0%, 0.1);
+    width: calculateRem(135px);
+    height: calculateRem(44px);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: calculateRem(16px);
+    line-height: calculateRem(20px);
+    cursor: pointer;
+    margin-bottom: calculateRem(24px);
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, #5550b2, #5550b2);
+    }
+  }
+}
+
+.actual,
+.overdue {
+  &__title {
+    color: $primary-color;
+    font-size: calculateRem(16px);
+    line-height: calculateRem(20px);
+    margin-bottom: calculateRem(12px);
+  }
+
+  &__invoice {
+    background: $secondary-color-gradient;
+    padding: calculateRem(18px) calculateRem(16px) calculateRem(13px);
+    border-radius: 10px;
+    margin-bottom: calculateRem(24px);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: calculateRem(15px);
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: calculateRem(20px);
+    line-height: (24.38px);
+    color: white;
+    &-number {
+      font-weight: 700;
+      font-size: calculateRem(36px);
+      line-height: calculateRem(43.88px);
+    }
+  }
+
+  &__reference,
+  &__status,
+  &__duedate,
+  &__name,
+  &__barcode {
+    &-title {
+      color: white;
+      font-weight: 500;
+      font-size: calculateRem(11px);
+      line-height: calculateRem(13.41px);
+    }
+
+    &-proper {
+      color: white;
+      font-weight: 500;
+      font-size: calculateRem(14px);
+      line-height: calculateRem(17.07px);
+    }
+  }
+  
+  &__status-proper {
+    text-transform: uppercase;
+  }
+
+  &__price,
+  &__barcode {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.green-detail {
+  height: calculateRem(5px);
+  width: calculateRem(90.14px);
+  background-color: $ok-green;
+  border-radius: 5px;
+}

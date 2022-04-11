@@ -249,9 +249,15 @@
           <article class="bill__main">
             <fieldset class="bill__main-form-wrapper">
               <div class="form-wrapper flex">
-                <form action="" class="form-wrapper__plan-form flex-column">
-                  <label for="plan" class="form-wrapper__plan-label">Plano</label>
-                  <select name="plan" id="plan" class="form-wrapper__plan-select">
+                <form action="" class="form-wrapper__plan flex-column">
+                  <label for="plan" class="form-wrapper__plan-label">
+                    Plano
+                  </label>
+                  <select
+                    name="plan"
+                    id="plan"
+                    class="form-wrapper__plan-select"
+                  >
                     <option
                       value="(27) 1000-MEGA VCT RES ULTRA"
                       class="form-wrapper__plan-option"
@@ -271,49 +277,53 @@
                     class="form-wrapper__address-select"
                     disabled
                   >
-                    <option value="1" class="form-wrapper__address option">
+                    <option value="1" class="form-wrapper__address-option">
                       RUA DEOLINDA GOMES 463 - CENTRO
                     </option>
                   </select>
                 </form>
               </div>
 
-              <button type="submit" class="form-wrapper__button">Consultar</button>
+              <button type="submit" class="form-wrapper__button">
+                Consultar
+              </button>
             </fieldset>
 
             <div class="bill__main-actual actual">
-              <h2 class="actual-title">Fatura Atual</h2>
-              <div class="actual__invoice">
-                <div class="actual__wrapper">
+              <h2 class="actual__title">Fatura Atual</h2>
+              <div class="actual__invoice flex">
+                <div class="actual__container">
                   <div class="green-detail"></div>
-                  <p class="actual__price">
-                    R$
-                    <span class="actual__price-number">199,99</span>
-                  </p>
-                  <div class="actual__reference">
-                    <p class="actual__reference-title">Mês de Referência</p>
-                    <p class="actual__reference-date">00/0000</p>
-                  </div>
-                  <div class="actual__status">
-                    <p class="actual__status-title">Situação</p>
-                    <p class="actual__status-status">Pago</p>
-                  </div>
-                  <div class="actual__duedate">
-                    <p class="actual__duedate-title">Vencimento</p>
-                    <p class="actual__duedate-date">00/00/0000</p>
-                  </div>
-                  <div class="actual__name">
-                    <p class="actual__name-title">Titular</p>
-                    <p class="actual__name-name">Nome Titular Completo</p>
-                  </div>
-                  <div class="actual__barcode">
-                    <p class="actual__barcode-title">Código de Barras</p>
-                    <p class="actual__barcode-proper">
-                      00000.00000 00000.000000 00000.000000 0 000000000000000
+                  <div class="actual__wrapper">
+                    <p class="actual__price">
+                      R$
+                      <span class="actual__price-number">199,99</span>
                     </p>
+                    <div class="actual__reference">
+                      <p class="actual__reference-title">Mês de Referência</p>
+                      <p class="actual__reference-proper">00/0000</p>
+                    </div>
+                    <div class="actual__status">
+                      <p class="actual__status-title">Situação</p>
+                      <p class="actual__status-proper">Pago</p>
+                    </div>
+                    <div class="actual__duedate">
+                      <p class="actual__duedate-title">Vencimento</p>
+                      <p class="actual__duedate-proper">00/00/0000</p>
+                    </div>
+                    <div class="actual__name">
+                      <p class="actual__name-title">Titular</p>
+                      <p class="actual__name-proper">Nome Titular Completo</p>
+                    </div>
+                    <div class="actual__barcode">
+                      <p class="actual__barcode-title">Código de Barras</p>
+                      <p class="actual__barcode-proper">
+                        00000.00000 00000.000000 00000.000000 0 000000000000000
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div class="bill__controls">
+                <div class="bill__controls flex-column">
                   <button class="bill__controls-copy" data-control="actual">
                     Copiar Código de Barras
                   </button>
@@ -336,45 +346,49 @@
 
             <div class="bill__main-overdue overdue">
               <h2 class="overdue__title">Faturas atrasadas</h2>
-              <div class="overdue__container">
-                <div class="green-detail"></div>
-                <p class="overdue__price">
-                  R$
-                  <span class="overdue__price-number">199,99</span>
-                </p>
-                <div class="overdue__reference">
-                  <p class="overdue__reference-title">Mês de Referência</p>
-                  <p class="overdue__reference-date">00/0000</p>
+              <div class="overdue__invoice flex">
+                <div class="overdue__container">
+                  <div class="green-detail"></div>
+                  <div class="overdue__wrapper">
+                    <p class="overdue__price">
+                      R$
+                      <span class="overdue__price-number">199,99</span>
+                    </p>
+                    <div class="overdue__reference">
+                      <p class="overdue__reference-title">Mês de Referência</p>
+                      <p class="overdue__reference-proper">00/0000</p>
+                    </div>
+                    <div class="overdue__status">
+                      <p class="overdue__status-title">Situação</p>
+                      <p class="overdue__status-proper">Pago</p>
+                    </div>
+                    <div class="overdue__duedate">
+                      <p class="overdue__duedate-title">Vencimento</p>
+                      <p class="overdue__duedate-proper">00/00/0000</p>
+                    </div>
+                    <div class="overdue__name">
+                      <p class="overdue__name-title">Titular</p>
+                      <p class="overdue__name-proper">Nome Titular Completo</p>
+                    </div>
+                    <div class="overdue__barcode">
+                      <p class="overdue__barcode-title">Código de Barras</p>
+                      <p class="overdue__barcode-proper">
+                        00000.00000 00000.000000 00000.000000 0 000000000000000
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="overdue__status">
-                  <p class="overdue__status-title">Situação</p>
-                  <p class="overdue__status-status">Pago</p>
+                <div class="bill__controls flex-column">
+                  <button class="bill__controls-copy" data-control="overdue">
+                    Copiar Código de Barras
+                  </button>
+                  <button class="bill__controls-email" data-control="overdue">
+                    Enviar por e-mail
+                  </button>
+                  <button class="bill__controls-card" data-control="overdue">
+                    Pagar com cartão de crédito
+                  </button>
                 </div>
-                <div class="overdue__duedate">
-                  <p class="overdue__duedate-title">Vencimento</p>
-                  <p class="overdue__duedate-date">00/00/0000</p>
-                </div>
-                <div class="overdue__name">
-                  <p class="overdue__name-title">Titular</p>
-                  <p class="overdue__name-name">Nome Titular Completo</p>
-                </div>
-                <div class="overdue__barcode">
-                  <p class="overdue__barcode-title">Código de Barras</p>
-                  <p class="overdue__barcode-proper">
-                    00000.00000 00000.000000 00000.000000 0 000000000000000
-                  </p>
-                </div>
-              </div>
-              <div class="bill__controls">
-                <button class="bill__controls-copy" data-control="overdue">
-                  Copiar Código de Barras
-                </button>
-                <button class="bill__controls-email" data-control="overdue">
-                  Enviar por e-mail
-                </button>
-                <button class="bill__controls-card" data-control="overdue">
-                  Pagar com cartão de crédito
-                </button>
               </div>
             </div>
           </article>

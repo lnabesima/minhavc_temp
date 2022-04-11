@@ -25,7 +25,7 @@
   text-overflow: ellipsis;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -107,19 +107,24 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: calculateRem(14px);
-  line-height: calculateRem(17px);
+  line-height: calculateRem(17.07px);
   color: $text-color;
 }
 
 label {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: calculateRem(12px);
+  line-height: calculateRem(15px);
+  color: $text-color;
 }
 
 .hidden-icon {
   visibility: hidden;
 }
 
-.go-back{
+.go-back {
   border: none;
   background: none;
   align-items: center;
@@ -127,7 +132,7 @@ label {
   margin-bottom: calculateRem(16px);
   cursor: pointer;
 
-  &-wrapper{
+  &-wrapper {
     align-items: center;
     justify-content: center;
     background-color: $secondary-color;
@@ -138,11 +143,7 @@ label {
 
   &:active {
     .go-back-wrapper {
-      background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.2),
-          rgba(0, 0, 0, 0.2)
-        ),
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
         linear-gradient(0deg, #5550b2, #5550b2);
     }
   }

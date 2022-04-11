@@ -64,6 +64,15 @@
     padding: calculateRem(18px) calculateRem(16px) calculateRem(13px);
     border-radius: 10px;
     margin-bottom: calculateRem(24px);
+
+    &-no-overdue{
+      font-weight: 600;
+      font-size: calculateRem(20px);
+      line-height: (24.38px);
+      color: white;
+      // no design está 40px, mas a classe `overdue_invoice` já tem um margin-bottom de 24px
+      margin-bottom: calculateRem(16px)
+    }
   }
 
   &__wrapper {
@@ -73,7 +82,7 @@
     gap: calculateRem(15px);
   }
 
-  &__price {
+  &__price{
     font-weight: 600;
     font-size: calculateRem(20px);
     line-height: (24.38px);
@@ -104,7 +113,7 @@
       line-height: calculateRem(17.07px);
     }
   }
-  
+
   &__status-proper {
     text-transform: uppercase;
   }

@@ -473,6 +473,14 @@ main::before {
   border-radius: 10px;
   margin-bottom: 1.5rem;
 }
+.actual__invoice-no-overdue,
+.overdue__invoice-no-overdue {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 24.38px;
+  color: white;
+  margin-bottom: 1rem;
+}
 .actual__wrapper,
 .overdue__wrapper {
   display: grid;

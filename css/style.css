@@ -455,9 +455,21 @@ main::before {
 .form-wrapper {
   gap: 0.98125rem;
   margin-bottom: 0.75rem;
+  grid-template-columns: 1fr 2fr;
 }
 .form-wrapper__plan, .form-wrapper__address {
   gap: 0.375rem;
+}
+.form-wrapper__plan-select, .form-wrapper__address-select {
+  height: 2.5rem;
+  background-color: white;
+  border: 1px solid #d0d9dd;
+  border-radius: 5px;
+  padding: 0.6875rem 0.875rem;
+  color: rgba(69, 90, 99, 0.5);
+}
+.form-wrapper__plan-option, .form-wrapper__address-option {
+  background-color: white;
 }
 .form-wrapper__button {
   background-color: #5550b2;
@@ -560,6 +572,11 @@ main::before {
   width: 5.63375rem;
   background-color: #00c853;
   border-radius: 5px;
+}
+
+.form-disabled {
+  background-color: rgba(208, 217, 221, 0.25);
+  appearance: none;
 }
 
 .footer {
